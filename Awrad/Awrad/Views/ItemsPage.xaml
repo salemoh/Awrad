@@ -25,7 +25,8 @@
                 <Label Text="{Binding Description}"
                        LineBreakMode="NoWrap"
                        Style="{DynamicResource ListItemDetailTextStyle}"
-                       FontSize="13"/>
+                       FontSize="13"
+                       HorizontalTextAlignment="End"/>
               </StackLayout>
             </ViewCell>
           </DataTemplate>
