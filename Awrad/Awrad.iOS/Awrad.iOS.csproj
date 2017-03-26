@@ -142,6 +142,7 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
+    <BundleResource Include="Resources\Awrad.sqlite" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileHelper.cs" />
