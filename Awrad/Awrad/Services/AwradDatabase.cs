@@ -12,12 +12,12 @@ namespace Awrad.Services
 		public AwradDatabase(string dbPath)
 		{
 			database = new SQLiteAsyncConnection(dbPath);
-			database.CreateTableAsync<Thiker>().Wait();
+			//database.CreateTableAsync<Thiker>().Wait();
 		}
 
-		public Task<List<Thiker>> GetItemsAsync()
+		public Task<List<Wird>> GetAwradAsync()
 		{
-			return database.Table<Thiker>().ToListAsync();
+			return database.Table<Wird>().ToListAsync();
 		}
 
 		public Task<List<Thiker>> GetItemsNotDoneAsync()

@@ -9,13 +9,13 @@ namespace Awrad.Views
 {
     public partial class ItemsPage : ContentPage
     {
-        ItemsViewModel viewModel;
+        WirdViewModel viewModel;
 
         public ItemsPage()
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel = new WirdViewModel();
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
@@ -39,7 +39,7 @@ namespace Awrad.Views
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
+            if (viewModel.Wirds.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
     }

@@ -10,22 +10,22 @@ using Xamarin.Forms;
 
 namespace Awrad.ViewModels
 {
-    public class ItemsViewModel : BaseViewModel
+    public class WirdViewModel : BaseViewModel
     {
-        public ObservableRangeCollection<Item> Items { get; set; }
+        public ObservableRangeCollection<Wird> Wirds { get; set; }
         public Command LoadItemsCommand { get; set; }
 
-        public ItemsViewModel()
+        public WirdViewModel()
         {
             Title = "Browse";
-            Items = new ObservableRangeCollection<Item>();
+            Wirds = new ObservableRangeCollection<Wird>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
             MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
             {
-                var _item = item as Item;
-                Items.Add(_item);
-                await DataStore.AddItemAsync(_item);
+                //var _item = item as Item;
+                //Wirds.Add(_item);
+                //await DataStore.AddItemAsync(_item);
             });
         }
 
@@ -38,9 +38,9 @@ namespace Awrad.ViewModels
 
             try
             {
-                Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
-                Items.ReplaceRange(items);
+                Wirds.Clear();
+                var wirds = await App.Database.GetAwradAsync();
+                Wirds.ReplaceRange(wirds);
             }
             catch (Exception ex)
             {
@@ -48,7 +48,7 @@ namespace Awrad.ViewModels
                 MessagingCenter.Send(new MessagingCenterAlert
                 {
                     Title = "Error",
-                    Message = "Unable to load items.",
+                    Message = "Unable to load wirds.",
                     Cancel = "OK"
                 }, "message");
             }
