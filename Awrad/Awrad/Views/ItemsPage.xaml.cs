@@ -24,7 +24,7 @@ namespace Awrad.Views
             if (item == null)
                 return;
 
-            await Navigation.PushAsync(new ItemDetailPage(new WirdDetailViewModel(item)));
+            await Navigation.PushAsync(new WirdDetailPage(new WirdDetailViewModel(item)));
 
             // Manually deselect item
             ItemsListView.SelectedItem = null;

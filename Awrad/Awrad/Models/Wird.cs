@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using System.Collections.Generic;
+using SQLite;
 
 namespace Awrad.Models
 {
@@ -11,6 +12,7 @@ namespace Awrad.Models
         public string Introduction { get; set; } // Wird intro
         public string Summary { get; set; } // Summary of the wird
         public string Accent { get; set; } // Location of image accents to display as border for wird
+        public List<Thiker> Thiker { get; set; } // The list of thiker as part of this Wird
     }
 }
 

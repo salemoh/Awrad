@@ -31,11 +31,11 @@ namespace Awrad.iOS
 
             void CopyDbIfNotExist()
             {
-                if (!File.Exists(dbPath))
-                {
+                //if (!File.Exists(dbPath))
+                //{
                     var existingDb = NSBundle.MainBundle.PathForResource("Awrad", "sqlite");
                     File.Copy(existingDb, dbPath);
-                }
+                //}
             }
 
         }

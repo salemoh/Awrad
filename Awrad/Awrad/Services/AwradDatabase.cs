@@ -25,12 +25,19 @@ namespace Awrad.Services
 			return database.QueryAsync<Thiker>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
 		}
 
-		public Task<Thiker> GetItemAsync(int id)
+        // Get a wird from DB
+		public Task<Wird> GetWirdAsync(int id)
 		{
-			return database.Table<Thiker>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return database.Table<Wird>().Where(i => i.Id == id).FirstOrDefaultAsync();
 		}
 
-		public Task<int> SaveItemAsync(Thiker item)
+        // Get thiker from DB for a specific wird
+        public Task<List<Thiker>> GetThikerAsync(int wirdType)
+        {
+            return database.Table<Thiker>().Where(i => i.WirdType == wirdType).ToListAsync();
+        }
+
+        public Task<int> SaveItemAsync(Thiker item)
 		{
 			if (item.Id != 0)
 			{
