@@ -6,10 +6,7 @@
              Title="{Binding Title}">
     <ContentPage>
         <StackLayout Spacing="20" Padding="15">
-            <!--<Label Text="{Binding Wird.Description}" FontSize="Medium"
-                   HorizontalTextAlignment="End" />-->
-            <!--<Label Text="{Binding Item.Description}" FontSize="Small"/>-->
-            <Label Text="{Binding Wird.Introduction}"
+            <Label Text="{Binding Wird.Summary}"
                        LineBreakMode="CharacterWrap"
                        Style="{DynamicResource ListItemDetailTextStyle}"
                        FontSize="13"
@@ -18,10 +15,7 @@
     </ContentPage>
     <ContentPage>
         <StackLayout Spacing="20" Padding="15">
-            <!--<Label Text="{Binding Wird.Description}" FontSize="Medium"
-                   HorizontalTextAlignment="End" />-->
-            <!--<Label Text="{Binding Item.Description}" FontSize="Small"/>-->
-            <Label Text="{Binding Wird.Summary}"
+            <Label Text="{Binding Wird.Introduction}"
                        LineBreakMode="CharacterWrap"
                        Style="{DynamicResource ListItemDetailTextStyle}"
                        FontSize="13"

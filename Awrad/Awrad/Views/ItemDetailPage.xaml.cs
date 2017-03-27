@@ -20,6 +20,9 @@ namespace Awrad.Views
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
+
+            // Set the navigation to start from last page
+            CurrentPage = Children[Children.Count - 1];
         }
     }
 }
