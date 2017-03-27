@@ -10,7 +10,7 @@
                    HorizontalTextAlignment="End" />-->
             <!--<Label Text="{Binding Item.Description}" FontSize="Small"/>-->
             <Label Text="{Binding Wird.Introduction}"
-                       LineBreakMode="NoWrap"
+                       LineBreakMode="CharacterWrap"
                        Style="{DynamicResource ListItemDetailTextStyle}"
                        FontSize="13"
                        HorizontalTextAlignment="End"/>
