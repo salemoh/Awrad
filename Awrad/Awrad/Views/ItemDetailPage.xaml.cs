@@ -7,7 +7,7 @@ namespace Awrad.Views
 {
     public partial class ItemDetailPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        WirdDetailViewModel viewModel;
 
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
         public ItemDetailPage()
@@ -15,7 +15,7 @@ namespace Awrad.Views
             InitializeComponent();
         }
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        public ItemDetailPage(WirdDetailViewModel viewModel)
         {
             InitializeComponent();
 
