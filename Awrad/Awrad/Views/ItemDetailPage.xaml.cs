@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace Awrad.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class ItemDetailPage : CarouselPage
     {
         WirdDetailViewModel viewModel;
 
