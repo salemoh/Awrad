@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Awrad.Models;
 using Awrad.ViewModels;
 using Xamarin.Forms;
@@ -28,7 +29,7 @@ namespace Awrad.Views
             }
         }
 
-        protected override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
 
@@ -37,10 +38,24 @@ namespace Awrad.Views
             //    viewModel.LoadThikerCommand.Execute(null);
 
             // Populate the pages
-            PopulateWirdPages();
+            await Task.Run(async () =>
+            {
+                var tcs = new TaskCompletionSource<bool>();
+
+                // Lets await to fill the thiker
+                await viewModel.PopulateThiker();
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    PopulateWirdPages();
+                    tcs.SetResult(false);
+                });
+
+                return tcs.Task;
+            });
         }
 
-        private void PopulateWirdPages()
+        private async void PopulateWirdPages()
         {
             // Border padding
             var padding = new Thickness(0, Device.OnPlatform(40, 40, 0), 0, 0);
