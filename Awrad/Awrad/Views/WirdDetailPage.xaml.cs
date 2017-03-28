@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Awrad.Models;
 using Awrad.ViewModels;
@@ -124,11 +125,18 @@ namespace Awrad.Views
 
             // Add pages in proper RTL order
             Children.Add(SummaryPage);
-            foreach (var thikerPage in thikerPages)
+            foreach (var thikerPage in Enumerable.Reverse(thikerPages))
             {
+                // Add the pages in reverse order
                 Children.Add(thikerPage);
             }
             Children.Add(IntroductionPage);
+
+            // Set the current page to the last page
+            if (Children.Count > 0)
+            {
+                CurrentPage = Children[Children.Count - 1];
+            }
         }
     }
 }
