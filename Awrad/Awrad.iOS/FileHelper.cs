@@ -31,10 +31,11 @@ namespace Awrad.iOS
 
             void CopyDbIfNotExist()
             {
+                // In development we always deploy the asset DB in case of updates
                 //if (!File.Exists(dbPath))
                 //{
                     var existingDb = NSBundle.MainBundle.PathForResource("Awrad", "sqlite");
-                    File.Copy(existingDb, dbPath);
+                    File.Copy(existingDb, dbPath, true);
                 //}
             }
 
