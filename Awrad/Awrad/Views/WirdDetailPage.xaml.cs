@@ -59,7 +59,8 @@ namespace Awrad.Views
         private async void PopulateWirdPages()
         {
             // Border padding
-            var padding = new Thickness(0, Device.OnPlatform(40, 40, 0), 0, 0);
+            var padding = new Thickness(Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0),
+                Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0));
 
             // Populate the Introduction page
             var IntroductionPage = new ContentPage
@@ -73,7 +74,8 @@ namespace Awrad.Views
                         {
                             Text = viewModel.Wird.Introduction,
                             FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.End
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                            HorizontalTextAlignment = TextAlignment.End
                         },
                     }
                 }
@@ -91,7 +93,8 @@ namespace Awrad.Views
                         {
                             Text = viewModel.Wird.Summary,
                             FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.End
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                            HorizontalTextAlignment = TextAlignment.End
                         },
                     }
                 }
@@ -113,7 +116,8 @@ namespace Awrad.Views
                             {
                                 Text = thiker.Content,
                                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                                HorizontalOptions = LayoutOptions.End
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                            HorizontalTextAlignment = TextAlignment.End
                             },
                         }
                     }
