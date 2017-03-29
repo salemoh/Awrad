@@ -62,43 +62,14 @@ namespace Awrad.Views
             var padding = new Thickness(Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0),
                 Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0));
 
-            // Populate the Introduction page
-            var IntroductionPage = new ContentPage
-            {
-                Padding = padding,
-                Content = new StackLayout
-                {
-                    Children =
-                    {
-                        new Label
-                        {
-                            Text = viewModel.Wird.Introduction,
-                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.FillAndExpand,
-                            HorizontalTextAlignment = TextAlignment.End
-                        },
-                    }
-                }
-            };
+            // Create Wird specific pages
+            var introductionPage = GetRtlContentPage(padding, viewModel.Wird.Introduction);
+            var summaryPage = GetRtlContentPage(padding, viewModel.Wird.Summary);
+            var CountingPage = GetRtlCountingPage(padding, viewModel.Wird.Introduction);
 
-            // Populate the summary page
-            var SummaryPage = new ContentPage
-            {
-                Padding = padding,
-                Content = new StackLayout
-                {
-                    Children =
-                    {
-                        new Label
-                        {
-                            Text = viewModel.Wird.Summary,
-                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.FillAndExpand,
-                            HorizontalTextAlignment = TextAlignment.End
-                        },
-                    }
-                }
-            };
+
+            // Sample counting page
+            var grid = GetRtlCountingPage(padding, viewModel.Wird.Introduction);
 
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
@@ -116,8 +87,8 @@ namespace Awrad.Views
                             {
                                 Text = thiker.Content,
                                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.FillAndExpand,
-                            HorizontalTextAlignment = TextAlignment.End
+                                HorizontalOptions = LayoutOptions.FillAndExpand,
+                                HorizontalTextAlignment = TextAlignment.End
                             },
                         }
                     }
@@ -128,19 +99,99 @@ namespace Awrad.Views
             }
 
             // Add pages in proper RTL order
-            Children.Add(SummaryPage);
+            Children.Add(summaryPage);
             foreach (var thikerPage in Enumerable.Reverse(thikerPages))
             {
                 // Add the pages in reverse order
                 Children.Add(thikerPage);
             }
-            Children.Add(IntroductionPage);
+            Children.Add(introductionPage);
+            Children.Add(CountingPage);
 
             // Set the current page to the last page
             if (Children.Count > 0)
             {
                 CurrentPage = Children[Children.Count - 1];
             }
+        }
+
+        private ContentPage GetRtlCountingPage(Thickness padding, string content)
+        {
+            var grid = new Grid();
+
+            // Define our grid columns
+            grid.RowDefinitions.Add(new RowDefinition() {Height = new GridLength(1, GridUnitType.Star)});
+            grid.RowDefinitions.Add(new RowDefinition() {Height = new GridLength(100)});
+
+            grid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
+            grid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
+
+            // Create a scroll view for the text content
+            var scrollView = new ScrollView
+            {
+                VerticalOptions = LayoutOptions.Fill,
+                Content = new StackLayout
+                {
+                    Children =
+                    {
+                        new Label
+                        {
+                            Text = content,
+                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                            HorizontalTextAlignment = TextAlignment.End
+                        },
+                    }
+                }
+            };
+            var stackLayout = new StackLayout
+            {
+                Children =
+                {
+                    new Label
+                    {
+                        Text = viewModel.Wird.Introduction,
+                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                        HorizontalOptions = LayoutOptions.FillAndExpand,
+                        HorizontalTextAlignment = TextAlignment.End
+                    },
+                }
+            };
+
+            // Align the content and counting elements
+            grid.Children.Add(scrollView, 0, 0);
+            Grid.SetColumnSpan(scrollView, 2);
+
+            grid.Children.Add(new Image {Source = "zero.png"}, 0, 1);
+            grid.Children.Add(new Image {Source = "zero.png"}, 1, 1);
+
+            return new ContentPage
+            {
+                Padding = padding,
+                Content = grid
+            };
+        }
+
+        private ContentPage GetRtlContentPage(Thickness padding, string content)
+        {
+            var IntroductionPage = new ContentPage
+            {
+                Padding = padding,
+                Content = new StackLayout
+                {
+                    Children =
+                    {
+                        new Label
+                        {
+                            Text = content,
+                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                            HorizontalTextAlignment = TextAlignment.End
+                        },
+                    }
+                }
+            };
+            return IntroductionPage;
         }
     }
 }
