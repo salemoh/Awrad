@@ -115,6 +115,13 @@ namespace Awrad.Views
             }
         }
 
+
+        /// <summary>
+        /// Generates a counting page for a thiker
+        /// </summary>
+        /// <param name="padding"></param>
+        /// <param name="content"></param>
+        /// <returns></returns>
         private ContentPage GetRtlCountingPage(Thickness padding, string content)
         {
             var grid = new Grid();
@@ -144,32 +151,45 @@ namespace Awrad.Views
                     }
                 }
             };
-            var stackLayout = new StackLayout
+            var contentLabel = new Label
             {
-                Children =
-                {
-                    new Label
-                    {
-                        Text = viewModel.Wird.Introduction,
-                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        HorizontalTextAlignment = TextAlignment.End
-                    },
-                }
+                Text = content,
+                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                HorizontalTextAlignment = TextAlignment.End
             };
 
-            // Align the content and counting elements
-            grid.Children.Add(scrollView, 0, 0);
-            Grid.SetColumnSpan(scrollView, 2);
 
-            grid.Children.Add(new Image {Source = "zero.png"}, 0, 1);
+            // Align the content and counting elements
+            grid.Children.Add(contentLabel, 0, 0);
+            Grid.SetColumnSpan(contentLabel, 2);
+            grid.Children.Add(new Label {Text = ""}, 0, 1);
             grid.Children.Add(new Image {Source = "zero.png"}, 1, 1);
+
+            // Hook up the tap gester for the page
+            var tapGesture = new TapGestureRecognizer {NumberOfTapsRequired = 1};
+            tapGesture.Tapped += TapGesture_Tapped;
+            grid.GestureRecognizers.Add(tapGesture);
 
             return new ContentPage
             {
                 Padding = padding,
                 Content = grid
             };
+        }
+
+
+        private void TapGesture_Tapped(object sender, System.EventArgs e)
+        {
+            // Get the grid from the sender
+            var grid = sender as Grid;
+
+            // Get the image and lable
+            var counter = grid.Children[1] as Label;
+            var hand = grid.Children[2] as Image;
+
+            // Let us fade out the image
+            hand.FadeTo(0, 1000);
         }
 
         private ContentPage GetRtlContentPage(Thickness padding, string content)
