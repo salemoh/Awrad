@@ -23,9 +23,14 @@ namespace Awrad.Droid
 
             void CopyDbIfNotExist()
             {
-                var fileSize = new FileInfo(path).Length;
-                //if (!File.Exists(path) || fileSize < 100)
-                //{
+                // Check if file exists or too small
+                var copyDB = !File.Exists(path) || (new FileInfo(path).Length < 100);
+
+                // In developement lets make always true
+                copyDB = true;
+
+                if (copyDB)
+                {
                     // Get an instance of asset manager
                     var assets = Android.App.Application.Context.Assets;
 
@@ -41,7 +46,7 @@ namespace Awrad.Droid
                             }
                         }
                     }
-                //}
+                }
 
             }
         }
