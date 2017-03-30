@@ -20,7 +20,7 @@ namespace Awrad.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Wird;
+            var item = args.SelectedItem as WirdClass;
             if (item == null)
                 return;
 

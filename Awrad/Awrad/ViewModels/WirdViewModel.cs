@@ -12,13 +12,13 @@ namespace Awrad.ViewModels
 {
     public class WirdViewModel : BaseViewModel
     {
-        public ObservableRangeCollection<Wird> Wirds { get; set; }
+        public ObservableRangeCollection<WirdClass> Wirds { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public WirdViewModel()
         {
             Title = "أوراد اليوم والليلة";
-            Wirds = new ObservableRangeCollection<Wird>();
+            Wirds = new ObservableRangeCollection<WirdClass>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
         }
 

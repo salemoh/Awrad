@@ -2,7 +2,8 @@
 
 namespace Awrad.Models
 {
-    public class Thiker
+    [Table("Thiker")]
+    public class ThikerClass
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

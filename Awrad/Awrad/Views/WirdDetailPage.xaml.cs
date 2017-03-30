@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Awrad.Helpers;
 using Awrad.Models;
 using Awrad.ViewModels;
 using Xamarin.Forms;
@@ -35,7 +37,7 @@ namespace Awrad.Views
             base.OnAppearing();
 
             // If not yet, load the thiker from DB on appearing
-            //if (viewModel.Wird.Thiker == null || viewModel.Wird.Thiker.Count == 0)
+            //if (viewModel.WirdClass.ThikerClass == null || viewModel.WirdClass.ThikerClass.Count == 0)
             //    viewModel.LoadThikerCommand.Execute(null);
 
             // Populate the pages
@@ -62,21 +64,17 @@ namespace Awrad.Views
             var padding = new Thickness(Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0),
                 Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0));
 
-            // Create Wird specific pages
+            // Create WirdClass specific pages
             var introductionPage = GetRtlContentPage(padding, viewModel.Wird.Introduction);
             var summaryPage = GetRtlContentPage(padding, viewModel.Wird.Summary);
-            var CountingPage = GetRtlCountingPage(padding, viewModel.Wird.Introduction);
-
-
-            // Sample counting page
-            var grid = GetRtlCountingPage(padding, viewModel.Wird.Introduction);
+            var countingPage = GetRtlCountingPage(padding, viewModel.Wird.Thiker[0]);
 
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
             foreach (var thiker in viewModel.Wird.Thiker)
             {
                 // Populate the summary page
-                var ThikerPage = new ContentPage
+                var thikerPage = new ContentPage
                 {
                     Padding = padding,
                     Content = new StackLayout
@@ -95,7 +93,7 @@ namespace Awrad.Views
                 };
 
                 // Add page to list
-                thikerPages.Add(ThikerPage);
+                thikerPages.Add(thikerPage);
             }
 
             // Add pages in proper RTL order
@@ -106,7 +104,7 @@ namespace Awrad.Views
                 Children.Add(thikerPage);
             }
             Children.Add(introductionPage);
-            Children.Add(CountingPage);
+            Children.Add(countingPage);
 
             // Set the current page to the last page
             if (Children.Count > 0)
@@ -122,7 +120,7 @@ namespace Awrad.Views
         /// <param name="padding"></param>
         /// <param name="content"></param>
         /// <returns></returns>
-        private ContentPage GetRtlCountingPage(Thickness padding, string content)
+        private ContentPage GetRtlCountingPage(Thickness padding, ThikerClass thiker)
         {
             var grid = new Grid();
 
@@ -133,42 +131,36 @@ namespace Awrad.Views
             grid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
             grid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
 
-            // Create a scroll view for the text content
-            var scrollView = new ScrollView
-            {
-                VerticalOptions = LayoutOptions.Fill,
-                Content = new StackLayout
-                {
-                    Children =
-                    {
-                        new Label
-                        {
-                            Text = content,
-                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.FillAndExpand,
-                            HorizontalTextAlignment = TextAlignment.End
-                        },
-                    }
-                }
-            };
             var contentLabel = new Label
             {
-                Text = content,
+                Text = thiker.Content,
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HorizontalTextAlignment = TextAlignment.End
             };
 
+            var counterLabel = new Label
+            {
+                Text = "0",
+                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                HorizontalTextAlignment = TextAlignment.Center,
+                VerticalTextAlignment = TextAlignment.Center
+            };
 
             // Align the content and counting elements
             grid.Children.Add(contentLabel, 0, 0);
             Grid.SetColumnSpan(contentLabel, 2);
-            grid.Children.Add(new Label {Text = ""}, 0, 1);
+            grid.Children.Add(counterLabel, 0, 1);
             grid.Children.Add(new Image {Source = "zero.png"}, 1, 1);
 
             // Hook up the tap gester for the page
-            var tapGesture = new TapGestureRecognizer {NumberOfTapsRequired = 1};
-            tapGesture.Tapped += TapGesture_Tapped;
+            var tapGesture = new TapGestureRecognizer
+            {
+                NumberOfTapsRequired = 1,
+                Command = new Command<ThikerCounter>(OnTapThiker),
+                CommandParameter = new ThikerCounter(thiker, grid)
+            };
             grid.GestureRecognizers.Add(tapGesture);
 
             return new ContentPage
@@ -176,6 +168,11 @@ namespace Awrad.Views
                 Padding = padding,
                 Content = grid
             };
+        }
+
+        private void OnTapThiker(ThikerCounter thikerCounter)
+        {
+            thikerCounter.IncrementIteration();
         }
 
 
