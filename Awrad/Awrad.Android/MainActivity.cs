@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using FFImageLoading.Forms.Droid;
 
 namespace Awrad.Droid
 {
@@ -15,6 +16,8 @@ namespace Awrad.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            CachedImageRenderer.Init();
 
             LoadApplication(new App());
         }

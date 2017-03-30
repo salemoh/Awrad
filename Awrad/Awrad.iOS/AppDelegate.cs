@@ -1,4 +1,6 @@
 ﻿
+using FFImageLoading.Forms;
+using FFImageLoading.Forms.Touch;
 using Foundation;
 using UIKit;
 
@@ -10,6 +12,9 @@ namespace Awrad.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init();
+
+            CachedImageRenderer.Init();
+
 			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);

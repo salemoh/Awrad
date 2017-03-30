@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Awrad.Models;
+using FFImageLoading.Forms;
 using Xamarin.Forms;
 
 namespace Awrad.Helpers
@@ -50,6 +51,7 @@ namespace Awrad.Helpers
         {
             // Increment the current iteration
             CurrentIteration++;
+            int nextHandIndex = (CurrentIteration % Constants.HandSequence.Length);
 
             // Update the grid UI with the new lable and hand
             Device.BeginInvokeOnMainThread(() =>
@@ -61,12 +63,11 @@ namespace Awrad.Helpers
                     label.Text = CurrentIteration.ToString();
                 }
 
-                // Update the hand image
-                var handImage = Grid.Children[2] as Image;
-                if (handImage != null)
-                {
-                    handImage.Source = HandImage;
-                }
+                // Hide current hand
+                var currentHand = Grid.Children[2] as CachedImage;
+                if (currentHand != null)
+                    currentHand.Source = Constants.HandSequence[nextHandIndex];
+
             });
         }
 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Awrad.Helpers;
 using Awrad.Models;
 using Awrad.ViewModels;
+using FFImageLoading.Forms;
 using Xamarin.Forms;
 
 namespace Awrad.Views
@@ -152,7 +153,19 @@ namespace Awrad.Views
             grid.Children.Add(contentLabel, 0, 0);
             Grid.SetColumnSpan(contentLabel, 2);
             grid.Children.Add(counterLabel, 0, 1);
-            grid.Children.Add(new Image {Source = "zero.png"}, 1, 1);
+
+            // Add the image for the hand
+            var handImage = new CachedImage
+            {
+                Source = Constants.HandSequence[0],
+                HeightRequest = 50,
+                WidthRequest = 50,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                DownsampleToViewSize = true
+            };
+
+            grid.Children.Add(handImage, 1, 1);
 
             // Hook up the tap gester for the page
             var tapGesture = new TapGestureRecognizer
