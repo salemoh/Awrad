@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
@@ -13,12 +14,30 @@ namespace Awrad.ViewModels
     public class WirdViewModel : BaseViewModel
     {
         public ObservableRangeCollection<WirdClass> Wirds { get; set; }
+        public ObservableCollection<HeaderImage> HeaderImages { get; set; }
+
+
         public Command LoadItemsCommand { get; set; }
 
         public WirdViewModel()
         {
             Title = "أوراد اليوم والليلة";
             Wirds = new ObservableRangeCollection<WirdClass>();
+
+            HeaderImages = new ObservableCollection<HeaderImage>
+            {
+                new HeaderImage
+                {
+                    ImageUrl = "http://www.sqorebda3.com/vb/Photo/new_1423722305_127.png",
+                    Notes = "اللهم صلي وسلم على نبينا محمد"
+                },
+                new HeaderImage
+                {
+                    ImageUrl = "http://g.abunawaf.com/2009/8/21/mvib64wcx68u.png",
+                    Notes = "رمضان شهر الخير"
+                }
+            };
+
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
         }
 
