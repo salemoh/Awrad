@@ -17,12 +17,13 @@
                     <DataTemplate>
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
-                            <Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}"/>
+                            <Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}" />
                             <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
-                                <Label TextColor="White" Text="{Binding Notes}" FontSize="16" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <Label TextColor="White" Text="{Binding Notes}" FontSize="16"
+                                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
                             </StackLayout>
                         </Grid>
                     </DataTemplate>
@@ -32,22 +33,54 @@
             <ListView x:Name="ItemsListView"
                       ItemsSource="{Binding Wirds}"
                       VerticalOptions="FillAndExpand"
-                      HasUnevenRows="true"
                       RefreshCommand="{Binding LoadItemsCommand}"
-                      IsPullToRefreshEnabled="true"
                       IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                       CachingStrategy="RecycleElement"
                       ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
+
+                            <Grid VerticalOptions="FillAndExpand">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*" />
+                                    <ColumnDefinition Width="10" />
+                                </Grid.ColumnDefinitions>
+
+                                <BoxView VerticalOptions="Fill"
+                                         HorizontalOptions="Fill"
+                                         BackgroundColor="{Binding Accent}"
+                                         Grid.Column="1"
+                                         Grid.ColumnSpan="1" 
+                                         Grid.Row="0"
+                                         Grid.RowSpan="1"/>
+
+
+                                <Label Text="{Binding Description}"
+                                       VerticalOptions="Center"
+                                       LineBreakMode="NoWrap"
+                                       FontSize="16"
+                                       HorizontalTextAlignment="End"
+                                       TextColor="{Binding Accent}"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="1"
+                                       Grid.Row="0"
+                                       Grid.RowSpan="1"/>
+
+                            </Grid>
+
+                            <!--<StackLayout Padding="10">
                                 <Label Text="{Binding Description}"
                                        LineBreakMode="NoWrap"
                                        Style="{DynamicResource ListItemDetailTextStyle}"
                                        FontSize="13"
                                        HorizontalTextAlignment="End" />
-                            </StackLayout>
+                            </StackLayout>-->
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
