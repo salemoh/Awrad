@@ -68,30 +68,13 @@ namespace Awrad.Views
             // Create WirdClass specific pages
             var introductionPage = GetRtlContentPage(padding, viewModel.Wird.Introduction);
             var summaryPage = GetRtlContentPage(padding, viewModel.Wird.Summary);
-            var countingPage = GetRtlCountingPage(padding, viewModel.Wird.Thiker[0]);
 
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
             foreach (var thiker in viewModel.Wird.Thiker)
             {
                 // Populate the summary page
-                var thikerPage = new ContentPage
-                {
-                    Padding = padding,
-                    Content = new StackLayout
-                    {
-                        Children =
-                        {
-                            new Label
-                            {
-                                Text = thiker.Content,
-                                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                                HorizontalOptions = LayoutOptions.FillAndExpand,
-                                HorizontalTextAlignment = TextAlignment.End
-                            },
-                        }
-                    }
-                };
+                var thikerPage = GetRtlCountingPage(padding, thiker);
 
                 // Add page to list
                 thikerPages.Add(thikerPage);
@@ -105,7 +88,6 @@ namespace Awrad.Views
                 Children.Add(thikerPage);
             }
             Children.Add(introductionPage);
-            Children.Add(countingPage);
 
             // Set the current page to the last page
             if (Children.Count > 0)
