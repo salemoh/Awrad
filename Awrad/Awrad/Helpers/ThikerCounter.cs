@@ -60,7 +60,7 @@ namespace Awrad.Helpers
                 var label = Grid.Children[1] as Label;
                 if (label != null)
                 {
-                    label.Text = CurrentIteration.ToString();
+                    label.Text = CurrentIteration.ToString() + "\\" + Thiker.Iterations;
                 }
 
                 // Hide current hand

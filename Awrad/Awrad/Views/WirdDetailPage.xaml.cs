@@ -97,11 +97,42 @@ namespace Awrad.Views
         }
 
 
+        #region Create Pages
+
+        /// <summary>
+        /// Create a content page to be used for intro and sum
+        /// </summary>
+        /// <param name="padding"></param>
+        /// <param name="content"></param>
+        /// <returns></returns>
+        private ContentPage GetRtlContentPage(Thickness padding, string content)
+        {
+            var contentPage = new ContentPage
+            {
+                Padding = padding,
+                Content = new StackLayout
+                {
+                    Children =
+                    {
+                        new Label
+                        {
+                            Text = content,
+                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                            HorizontalTextAlignment = TextAlignment.End
+                        },
+                    }
+                }
+            };
+            return contentPage;
+        }
+
+
         /// <summary>
         /// Generates a counting page for a thiker
         /// </summary>
         /// <param name="padding"></param>
-        /// <param name="content"></param>
+        /// <param name="thiker"></param>
         /// <returns></returns>
         private ContentPage GetRtlCountingPage(Thickness padding, ThikerClass thiker)
         {
@@ -124,11 +155,12 @@ namespace Awrad.Views
 
             var counterLabel = new Label
             {
-                Text = "0",
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
+                Text = "0\\" + thiker.Iterations,
+                FontSize = 48,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HorizontalTextAlignment = TextAlignment.Center,
-                VerticalTextAlignment = TextAlignment.Center
+                VerticalTextAlignment = TextAlignment.Center,
+                TextColor = Color.FromHex(viewModel.Wird.Accent.Substring(1))
             };
 
             // Align the content and counting elements
@@ -140,16 +172,15 @@ namespace Awrad.Views
             var handImage = new CachedImage
             {
                 Source = Constants.HandSequence[0],
-                HeightRequest = 50,
-                WidthRequest = 50,
+                DownsampleWidth = 100,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
-                DownsampleToViewSize = true
             };
 
             grid.Children.Add(handImage, 1, 1);
 
-            // Hook up the tap gester for the page
+            // Local method to be hooked to tap
+            void OnTapThiker(ThikerCounter thikerCounter) => thikerCounter.IncrementIteration();
             var tapGesture = new TapGestureRecognizer
             {
                 NumberOfTapsRequired = 1,
@@ -164,46 +195,8 @@ namespace Awrad.Views
                 Content = grid
             };
         }
+        
+        #endregion
 
-        private void OnTapThiker(ThikerCounter thikerCounter)
-        {
-            thikerCounter.IncrementIteration();
-        }
-
-
-        private void TapGesture_Tapped(object sender, System.EventArgs e)
-        {
-            // Get the grid from the sender
-            var grid = sender as Grid;
-
-            // Get the image and lable
-            var counter = grid.Children[1] as Label;
-            var hand = grid.Children[2] as Image;
-
-            // Let us fade out the image
-            hand.FadeTo(0, 1000);
-        }
-
-        private ContentPage GetRtlContentPage(Thickness padding, string content)
-        {
-            var IntroductionPage = new ContentPage
-            {
-                Padding = padding,
-                Content = new StackLayout
-                {
-                    Children =
-                    {
-                        new Label
-                        {
-                            Text = content,
-                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.FillAndExpand,
-                            HorizontalTextAlignment = TextAlignment.End
-                        },
-                    }
-                }
-            };
-            return IntroductionPage;
-        }
     }
 }
