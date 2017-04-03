@@ -155,6 +155,9 @@
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
     <BundleResource Include="Resources\Awrad.sqlite" />
+    <BundleResource Include="Resources\arabtype.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileHelper.cs" />

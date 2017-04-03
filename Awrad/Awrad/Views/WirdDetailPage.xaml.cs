@@ -33,7 +33,7 @@ namespace Awrad.Views
             }
         }
 
-        protected async override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
@@ -59,7 +59,7 @@ namespace Awrad.Views
             });
         }
 
-        private async void PopulateWirdPages()
+        private void PopulateWirdPages()
         {
             // Border padding
             var padding = new Thickness(Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0),
@@ -96,7 +96,6 @@ namespace Awrad.Views
             }
         }
 
-
         #region Create Pages
 
         /// <summary>
@@ -110,17 +109,24 @@ namespace Awrad.Views
             var contentPage = new ContentPage
             {
                 Padding = padding,
-                Content = new StackLayout
+                Content = new ScrollView
                 {
-                    Children =
+                    Content = new StackLayout
                     {
-                        new Label
+                        Children =
                         {
-                            Text = content,
-                            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
-                            HorizontalOptions = LayoutOptions.FillAndExpand,
-                            HorizontalTextAlignment = TextAlignment.End
-                        },
+                            new Label
+                            {
+                                Text = content,
+                                FontSize = 36,
+                                HorizontalOptions = LayoutOptions.FillAndExpand,
+                                HorizontalTextAlignment = TextAlignment.End,
+                                FontFamily = Device.OnPlatform(
+                                    "Arabic Typesetting",
+                                    "arabtype.ttf#Arabic Typesetting",
+                                    null)
+                            },
+                        }
                     }
                 }
             };
@@ -148,9 +154,13 @@ namespace Awrad.Views
             var contentLabel = new Label
             {
                 Text = thiker.Content,
-                FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+                FontSize = 36,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                HorizontalTextAlignment = TextAlignment.End
+                HorizontalTextAlignment = TextAlignment.End,
+                FontFamily = Device.OnPlatform(
+                    "Arabic Typesetting",
+                    "arabtype.ttf#Arabic Typesetting",
+                    null)
             };
 
             var counterLabel = new Label
@@ -195,8 +205,7 @@ namespace Awrad.Views
                 Content = grid
             };
         }
-        
-        #endregion
 
+        #endregion
     }
 }
