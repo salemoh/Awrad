@@ -1,4 +1,5 @@
 ﻿
+using CarouselView.FormsPlugin.iOS;
 using FFImageLoading.Forms;
 using FFImageLoading.Forms.Touch;
 using Foundation;
@@ -12,6 +13,8 @@ namespace Awrad.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init();
+
+            CarouselViewRenderer.Init();
 
             CachedImageRenderer.Init();
 

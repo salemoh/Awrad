@@ -6,12 +6,8 @@
              x:Class="Awrad.Views.ItemsPage"
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
-    <!--<ContentPage.ToolbarItems>
-  	<ToolbarItem Text="Add Item" Clicked="AddItem_Clicked" />
-  </ContentPage.ToolbarItems>-->
     <ContentPage.Content>
         <StackLayout>
-
             <cv:CarouselViewControl x:Name="CarouselHeader"
                                     ItemsSource="{Binding HeaderImages}"
                                     IndicatorsShape="Circle"
@@ -24,14 +20,19 @@
                     <DataTemplate>
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="1*" />
                             </Grid.RowDefinitions>
-                            <Image Grid.RowSpan="2" Aspect="AspectFill" Source="{Binding ImageUrl}" />
-                            <StackLayout Grid.Row="1" BackgroundColor="#80000000" Padding="12">
-                                <Label TextColor="White" Text="{Binding Notes}" FontSize="16"
-                                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-                            </StackLayout>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="40"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Row="0" Grid.Column="0"
+                                   Grid.RowSpan="2" Grid.ColumnSpan="2" 
+                                   Aspect="AspectFill" Source="{Binding ImageUrl}" />
+                            <Image Grid.Column="1" Grid.Row="0" Aspect="AspectFit" Source="share.png"
+                                   HeightRequest="30" WidthRequest="30"
+                                   HorizontalOptions="Center" VerticalOptions="Center"></Image>
                         </Grid>
                     </DataTemplate>
                 </cv:CarouselViewControl.ItemTemplate>
@@ -94,4 +95,4 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

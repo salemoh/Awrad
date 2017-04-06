@@ -4707,8 +4707,8 @@ namespace Awrad.Droid
 			// aapt resource value: 0x7f0200f9
 			public const int navigation_empty_icon = 2130837753;
 			
-			// aapt resource value: 0x7f020100
-			public const int notification_template_icon_bg = 2130837760;
+			// aapt resource value: 0x7f020101
+			public const int notification_template_icon_bg = 2130837761;
 			
 			// aapt resource value: 0x7f0200fa
 			public const int one = 2130837754;
@@ -4717,16 +4717,19 @@ namespace Awrad.Droid
 			public const int profile_generic = 2130837755;
 			
 			// aapt resource value: 0x7f0200fc
-			public const int slideout = 2130837756;
+			public const int share = 2130837756;
 			
 			// aapt resource value: 0x7f0200fd
-			public const int three = 2130837757;
+			public const int slideout = 2130837757;
 			
 			// aapt resource value: 0x7f0200fe
-			public const int two = 2130837758;
+			public const int three = 2130837758;
 			
 			// aapt resource value: 0x7f0200ff
-			public const int zero = 2130837759;
+			public const int two = 2130837759;
+			
+			// aapt resource value: 0x7f020100
+			public const int zero = 2130837760;
 			
 			static Drawable()
 			{

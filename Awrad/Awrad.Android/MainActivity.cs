@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using CarouselView.FormsPlugin.Android;
 using FFImageLoading.Forms.Droid;
 
 namespace Awrad.Droid
@@ -16,6 +17,8 @@ namespace Awrad.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            CarouselViewRenderer.Init();
 
             CachedImageRenderer.Init();
 
