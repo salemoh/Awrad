@@ -19,26 +19,31 @@ namespace Awrad.ViewModels
 
         public Command LoadItemsCommand { get; set; }
 
+        public Command TapShare { get; set; }
+
         public WirdViewModel()
         {
             Title = "أوراد اليوم والليلة";
             Wirds = new ObservableRangeCollection<WirdClass>();
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            TapShare = new Command(OnTappedShare);
 
             HeaderImages = new ObservableCollection<HeaderImage>
             {
                 new HeaderImage
                 {
                     ImageUrl = "http://www.sqorebda3.com/vb/Photo/new_1423722305_127.png",
-                    Notes = "اللهم صلي وسلم على نبينا محمد"
+                    Notes = "اللهم صلي وسلم على نبينا محمد",
+                    TapShare = TapShare
                 },
                 new HeaderImage
                 {
                     ImageUrl = "http://g.abunawaf.com/2009/8/21/mvib64wcx68u.png",
-                    Notes = "رمضان شهر الخير"
+                    Notes = "رمضان شهر الخير",
+                    TapShare = TapShare
                 }
             };
 
-            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -68,6 +73,11 @@ namespace Awrad.ViewModels
             {
                 IsBusy = false;
             }
+        }
+
+        void OnTappedShare(object imageUrl)
+        {
+            DependencyService.Get<IShareHelper>().Share(imageUrl as string);
         }
     }
 }

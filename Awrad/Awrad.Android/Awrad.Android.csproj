@@ -150,6 +150,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShareHelperAndroid.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\arabtype.ttf">
@@ -171,12 +172,6 @@
     <AndroidResource Include="Resources\drawable-xhdpi\profile_generic.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\profile_generic.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\profile_generic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Awrad\Awrad.csproj">
-      <Project>{4a5898f8-f15a-4e06-93bf-fa6eec48a04c}</Project>
-      <Name>Awrad</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -306,6 +301,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Awrad\Awrad.csproj">
+      <Project>{26f36e14-2138-40d3-93ae-86c9e9a49007}</Project>
+      <Name>Awrad</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

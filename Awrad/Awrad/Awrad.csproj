@@ -40,6 +40,7 @@
     </Compile>
     <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Helpers\IFileHelper.cs" />
+    <Compile Include="Helpers\IShareHelper.cs" />
     <Compile Include="Helpers\MessengingCenterAlert.cs" />
     <Compile Include="Helpers\ObservableObject.cs" />
     <Compile Include="Helpers\ObservableRangeCollection.cs" />
