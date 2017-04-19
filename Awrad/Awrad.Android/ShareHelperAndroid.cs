@@ -13,24 +13,42 @@ using Android.Widget;
 using Awrad.Droid;
 using Awrad.Helpers;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 
 [assembly: Dependency(typeof(ShareHelperAndroid))]
 namespace Awrad.Droid
 {
     class ShareHelperAndroid : IShareHelper
     {
-        public void Share(string imageUrl)
+        public async void Share(string imageUrl)
         {
-            // Get the URI of the image
-            var imageUri = new Java.Net.URL(imageUrl);
-
-            Bitmap bitmap = BitmapFactory.DecodeStream(imageUri.OpenStream());
             var intent = new Intent(Intent.ActionSend);
-            intent.SetType("image/*");
-            intent.PutExtra(Intent.ExtraStream, imageUrl);
+            intent.SetType("image/png");
+
+            // Get the URI of the image
+            var imageUri = new Uri(imageUrl);
+            var imageSource = ImageSource.FromUri(imageUri);
+            var handler = new ImageLoaderSourceHandler();
+            var context = Xamarin.Forms.Forms.Context;
+            var bitmap = await handler.LoadImageAsync(imageSource, context);
+
+            // Get the file name
+            var filename = System.IO.Path.GetFileName(imageUrl);
+            var path =
+                Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDownloads +
+                                                                         Java.IO.File.Separator + filename);
+
+            using(var os = new System.IO.FileStream(path.AbsolutePath, System.IO.FileMode.Create))
+            {
+                bitmap.Compress(Bitmap.CompressFormat.Png, 100, os);
+            }
+
+
+            intent.PutExtra(Intent.ExtraStream, Android.Net.Uri.FromFile(path));
+
             var intentChooser = Intent.CreateChooser(intent, "Share via");
-            var activity = (MainActivity) Forms.Context;
-            activity.StartActivityForResult(intentChooser, 100);
+
+            context.StartActivity(intentChooser);
         }
     }
 }
