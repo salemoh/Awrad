@@ -73,8 +73,9 @@ namespace Awrad.Views
             var thikerPages = new List<ContentPage>();
             foreach (var thiker in viewModel.Wird.Thiker)
             {
-                // Populate the summary page
-                var thikerPage = GetRtlCountingPage(padding, thiker);
+                // We only publish a counting page if the Iterations > 1
+                var thikerPage = thiker.Iterations > 1 ? GetRtlCountingPage(padding, thiker) : 
+                    GetRtlContentPage(padding, thiker.Content);
 
                 // Add page to list
                 thikerPages.Add(thikerPage);
