@@ -21,4 +21,3 @@ namespace Awrad.Models
         public string Virtue { get; set; } // Virtue gained by reciting this thiker
     }
 }
-

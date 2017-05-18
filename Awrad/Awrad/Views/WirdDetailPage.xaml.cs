@@ -167,7 +167,7 @@ namespace Awrad.Views
             var counterLabel = new Label
             {
                 Text = "0\\" + thiker.Iterations,
-                FontSize = 48,
+                FontSize = 30,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HorizontalTextAlignment = TextAlignment.Center,
                 VerticalTextAlignment = TextAlignment.Center,
