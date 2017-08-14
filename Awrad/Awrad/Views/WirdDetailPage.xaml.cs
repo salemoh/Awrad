@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Awrad.Helpers;
@@ -7,6 +6,7 @@ using Awrad.Models;
 using Awrad.ViewModels;
 using FFImageLoading.Forms;
 using Xamarin.Forms;
+using static System.String;
 
 namespace Awrad.Views
 {
@@ -65,10 +65,6 @@ namespace Awrad.Views
             var padding = new Thickness(Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0),
                 Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0));
 
-            // Create WirdClass specific pages
-            var introductionPage = GetRtlContentPage(padding, viewModel.Wird.Introduction);
-            var summaryPage = GetRtlContentPage(padding, viewModel.Wird.Summary);
-
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
             foreach (var thiker in viewModel.Wird.Thiker)
@@ -81,14 +77,26 @@ namespace Awrad.Views
                 thikerPages.Add(thikerPage);
             }
 
+            // Add the summary page
+            if (!IsNullOrWhiteSpace(viewModel.Wird.Summary))
+            {
+                var summaryPage = GetRtlContentPage(padding, viewModel.Wird.Summary);
+                Children.Add(summaryPage);
+            }
+
             // Add pages in proper RTL order
-            Children.Add(summaryPage);
             foreach (var thikerPage in Enumerable.Reverse(thikerPages))
             {
                 // Add the pages in reverse order
                 Children.Add(thikerPage);
             }
-            Children.Add(introductionPage);
+
+            // If there is an introduction page add it
+            if (!IsNullOrWhiteSpace(viewModel.Wird.Introduction))
+            {
+                var introductionPage = GetRtlContentPage(padding, viewModel.Wird.Introduction);
+                Children.Add(introductionPage);
+            }
 
             // Set the current page to the last page
             if (Children.Count > 0)
