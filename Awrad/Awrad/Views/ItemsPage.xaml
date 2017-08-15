@@ -76,7 +76,7 @@
                                 <Label Text="{Binding Description}"
                                        VerticalOptions="Center"
                                        LineBreakMode="NoWrap"
-                                       FontSize="16"
+                                       FontSize="24"
                                        HorizontalTextAlignment="End"
                                        TextColor="{Binding Accent}"
                                        Grid.Column="0"
