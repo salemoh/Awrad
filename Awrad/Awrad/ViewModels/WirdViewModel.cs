@@ -34,12 +34,6 @@ namespace Awrad.ViewModels
                     ImageUrl = "http://www.sqorebda3.com/vb/Photo/new_1423722305_127.png",
                     Notes = "اللهم صلي وسلم على نبينا محمد",
                     TapShare = TapShare
-                },
-                new HeaderImage
-                {
-                    ImageUrl = "http://g.abunawaf.com/2009/8/21/mvib64wcx68u.png",
-                    Notes = "رمضان شهر الخير",
-                    TapShare = TapShare
                 }
             };
 
