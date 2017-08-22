@@ -14,6 +14,8 @@ namespace Awrad.Views
     {
         WirdDetailViewModel viewModel;
 
+        private const int ContentFontSize = 32;
+
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
         public WirdDetailPage()
         {
@@ -127,7 +129,7 @@ namespace Awrad.Views
                             new Label
                             {
                                 Text = content,
-                                FontSize = 36,
+                                FontSize = ContentFontSize,
                                 HorizontalOptions = LayoutOptions.FillAndExpand,
                                 HorizontalTextAlignment = TextAlignment.End,
                                 FontFamily = Device.OnPlatform(
@@ -163,7 +165,7 @@ namespace Awrad.Views
             var contentLabel = new Label
             {
                 Text = thiker.Content,
-                FontSize = 36,
+                FontSize = ContentFontSize,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HorizontalTextAlignment = TextAlignment.End,
                 FontFamily = Device.OnPlatform(
