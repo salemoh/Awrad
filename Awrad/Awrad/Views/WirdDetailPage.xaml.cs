@@ -28,6 +28,11 @@ namespace Awrad.Views
 
             BindingContext = this.viewModel = viewModel;
 
+            // Set the navigation to start from last page
+            if (Children.Count > 0)
+            {
+                CurrentPage = Children[Children.Count - 1];
+            }
         }
 
         protected override async void OnAppearing()
@@ -37,12 +42,6 @@ namespace Awrad.Views
             // If not yet, load the thiker from DB on appearing
             //if (viewModel.WirdClass.ThikerClass == null || viewModel.WirdClass.ThikerClass.Count == 0)
             //    viewModel.LoadThikerCommand.Execute(null);
-
-            // If we have children don't populate again
-            if (Children.Count > 0)
-            {
-                return;
-            }
 
             // Populate the pages
             await Task.Run(async () =>
@@ -73,7 +72,7 @@ namespace Awrad.Views
             foreach (var thiker in viewModel.Wird.Thiker)
             {
                 // We only publish a counting page if the Iterations > 1
-                var thikerPage = thiker.Iterations > 1 ? GetRtlCountingPage(padding, thiker) :
+                var thikerPage = thiker.Iterations > 1 ? GetRtlCountingPage(padding, thiker) : 
                     GetRtlContentPage(padding, thiker.Content);
 
                 // Add page to list
@@ -83,7 +82,7 @@ namespace Awrad.Views
             // Add the summary page
             if (!IsNullOrWhiteSpace(viewModel.Wird.Summary))
             {
-                var summaryPage = GetWebContentPage(padding, viewModel.Wird.Summary);
+                var summaryPage = GetRtlContentPage(padding, viewModel.Wird.Summary);
                 Children.Add(summaryPage);
             }
 
@@ -97,7 +96,7 @@ namespace Awrad.Views
             // If there is an introduction page add it
             if (!IsNullOrWhiteSpace(viewModel.Wird.Introduction))
             {
-                var introductionPage = GetWebContentPage(padding, viewModel.Wird.Introduction);
+                var introductionPage = GetRtlContentPage(padding, viewModel.Wird.Introduction);
                 Children.Add(introductionPage);
             }
 
@@ -145,22 +144,6 @@ namespace Awrad.Views
             return contentPage;
         }
 
-        private ContentPage GetWebContentPage(Thickness padding, string htmlContent)
-        {
-            // Create a webview source
-            HtmlWebViewSource htmlWebViewSource = new HtmlWebViewSource { Html = htmlContent };
-
-            var contentPage = new ContentPage
-            {
-                Padding = padding,
-                Content = new WebView
-                {
-                    Source = htmlWebViewSource,
-                    HorizontalOptions = LayoutOptions.FillAndExpand
-                }
-            };
-            return contentPage;
-        }
 
         /// <summary>
         /// Generates a counting page for a thiker
@@ -173,11 +156,11 @@ namespace Awrad.Views
             var grid = new Grid();
 
             // Define our grid columns
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(100) });
+            grid.RowDefinitions.Add(new RowDefinition() {Height = new GridLength(1, GridUnitType.Star)});
+            grid.RowDefinitions.Add(new RowDefinition() {Height = new GridLength(100)});
 
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
+            grid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
 
             var contentLabel = new Label
             {

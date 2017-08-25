@@ -37,19 +37,7 @@ namespace Awrad.Services
             return database.Table<ThikerClass>().Where(i => i.WirdType == wirdType).ToListAsync();
         }
 
-	    public Task<int> SaveWirdAsync(WirdClass wird)
-	    {
-            if (wird.Id != 0)
-            {
-                return database.UpdateAsync(wird);
-            }
-            else
-            {
-                return database.InsertAsync(wird);
-            }
-        }
-
-        public Task<int> SaveThikerAsync(ThikerClass item)
+        public Task<int> SaveItemAsync(ThikerClass item)
 		{
 			if (item.Id != 0)
 			{
