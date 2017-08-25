@@ -28,11 +28,6 @@ namespace Awrad.Views
 
             BindingContext = this.viewModel = viewModel;
 
-            // Set the navigation to start from last page
-            if (Children.Count > 0)
-            {
-                CurrentPage = Children[Children.Count - 1];
-            }
         }
 
         protected override async void OnAppearing()
@@ -42,6 +37,12 @@ namespace Awrad.Views
             // If not yet, load the thiker from DB on appearing
             //if (viewModel.WirdClass.ThikerClass == null || viewModel.WirdClass.ThikerClass.Count == 0)
             //    viewModel.LoadThikerCommand.Execute(null);
+
+            // If we have children don't populate again
+            if (Children.Count > 0)
+            {
+                return;
+            }
 
             // Populate the pages
             await Task.Run(async () =>
