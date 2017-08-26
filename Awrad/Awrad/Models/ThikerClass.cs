@@ -21,5 +21,6 @@ namespace Awrad.Models
         public string Virtue { get; set; } // Virtue gained by reciting this thiker
         public string Book { get; set; } // The book where this Thiker appeared
         public string Author { get; set; } // The authore of the book
+        public string AlternateContent { get; set; } // If there is an alternate to the original content
     }
 }
