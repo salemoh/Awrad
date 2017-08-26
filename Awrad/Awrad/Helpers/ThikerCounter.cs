@@ -49,6 +49,12 @@ namespace Awrad.Helpers
         /// </summary>
         public void IncrementIteration()
         {
+            // Don't increment if we are done
+            if (CurrentIteration >= Thiker.Iterations)
+            {
+                return;
+            }
+
             // Increment the current iteration
             CurrentIteration++;
             int nextHandIndex = (CurrentIteration % Constants.HandSequence.Length);
