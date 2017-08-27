@@ -15,7 +15,7 @@ namespace Awrad.ViewModels
         public WirdDetailViewModel(WirdClass wird = null)
         {
             Wird = wird;
-            Title = wird.Description;
+            if (wird != null) Title = wird.Description;
         }
 
         // Populate the thiker for a specific wird

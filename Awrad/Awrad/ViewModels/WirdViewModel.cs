@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 
 using Awrad.Helpers;
 using Awrad.Models;
-using Awrad.Views;
 using Xamarin.Forms;
 
 namespace Awrad.ViewModels

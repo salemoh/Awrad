@@ -9,7 +9,6 @@ namespace Awrad.Helpers
         /// </summary>
         public static void Init()
         {
-            var time = DateTime.UtcNow;
         }
 
         /// <summary>

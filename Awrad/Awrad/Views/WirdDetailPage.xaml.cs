@@ -10,9 +10,9 @@ using static System.String;
 
 namespace Awrad.Views
 {
-    public partial class WirdDetailPage : CarouselPage
+    public partial class WirdDetailPage
     {
-        WirdDetailViewModel viewModel;
+        private readonly WirdDetailViewModel _viewModel;
 
         private const int ContentFontSize = 32;
 
@@ -28,7 +28,7 @@ namespace Awrad.Views
         {
             InitializeComponent();
 
-            BindingContext = this.viewModel = wirdDetailViewModel;
+            BindingContext = _viewModel = wirdDetailViewModel;
 
         }
 
@@ -52,12 +52,12 @@ namespace Awrad.Views
                 var tcs = new TaskCompletionSource<bool>();
 
                 // Lets await to fill the thiker
-                await viewModel.PopulateThiker();
+                await _viewModel.PopulateThiker();
 
                 // Lets await to fill the related thiker if such thiker is present
-                if(viewModel.Wird.RelatedThiker == "Y")
+                if(_viewModel.Wird.RelatedThiker == "Y")
                 {
-                    await viewModel.PopulateRelatedThiker(RelatedThikerSize);
+                    await _viewModel.PopulateRelatedThiker(RelatedThikerSize);
                 }
 
                 Device.BeginInvokeOnMainThread(() =>
@@ -78,7 +78,7 @@ namespace Awrad.Views
 
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
-            foreach (var thiker in viewModel.Wird.ThikerList)
+            foreach (var thiker in _viewModel.Wird.ThikerList)
             {
                 // We only publish a counting page if the Iterations > 1
                 var thikerPage = thiker.Iterations > 1 ? GetRtlCountingPage(padding, thiker) : 
@@ -89,9 +89,9 @@ namespace Awrad.Views
             }
 
             // Add the summary page
-            if (!IsNullOrWhiteSpace(viewModel.Wird.Summary))
+            if (!IsNullOrWhiteSpace(_viewModel.Wird.Summary))
             {
-                var summaryPage = GetRtlContentPage(padding, viewModel.Wird.Summary);
+                var summaryPage = GetRtlContentPage(padding, _viewModel.Wird.Summary);
                 Children.Add(summaryPage);
             }
 
@@ -103,9 +103,9 @@ namespace Awrad.Views
             }
 
             // If there are related thiker add in proper RTL order
-            if (viewModel.Wird.RelatedThiker != null)
+            if (_viewModel.Wird.RelatedThiker != null)
             {
-                foreach (var relatedThiker in Enumerable.Reverse(viewModel.Wird.RelatedThikerList))
+                foreach (var relatedThiker in Enumerable.Reverse(_viewModel.Wird.RelatedThikerList))
                 {
                     // We only publish a counting page if the Iterations > 1
                     var thikerPage = relatedThiker.Iterations > 1 ? GetRtlCountingPage(padding, relatedThiker) :
@@ -117,9 +117,9 @@ namespace Awrad.Views
             }
 
             // If there is an introduction page add it
-            if (!IsNullOrWhiteSpace(viewModel.Wird.Introduction))
+            if (!IsNullOrWhiteSpace(_viewModel.Wird.Introduction))
             {
-                var introductionPage = GetRtlContentPage(padding, viewModel.Wird.Introduction);
+                var introductionPage = GetRtlContentPage(padding, _viewModel.Wird.Introduction);
                 Children.Add(introductionPage);
             }
 
@@ -204,7 +204,7 @@ namespace Awrad.Views
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HorizontalTextAlignment = TextAlignment.Center,
                 VerticalTextAlignment = TextAlignment.Center,
-                TextColor = Color.FromHex(viewModel.Wird.Accent.Substring(1))
+                TextColor = Color.FromHex(_viewModel.Wird.Accent.Substring(1))
             };
 
             // Align the content and counting elements

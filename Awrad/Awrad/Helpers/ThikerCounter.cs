@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Awrad.Models;
+﻿using Awrad.Models;
 using FFImageLoading.Forms;
 using Xamarin.Forms;
 
@@ -14,7 +9,7 @@ namespace Awrad.Helpers
     /// </summary>
     class ThikerCounter
     {
-        public ThikerClass Thiker { get; private set; }
+        public ThikerClass Thiker { get; }
         public Grid Grid { get; set; }
 
         public int CurrentIteration { get; private set; }
@@ -63,15 +58,13 @@ namespace Awrad.Helpers
             Device.BeginInvokeOnMainThread(() =>
             {
                 // Update label
-                var label = Grid.Children[1] as Label;
-                if (label != null)
+                if (Grid.Children[1] is Label label)
                 {
                     label.Text = CurrentIteration.ToString() + "\\" + Thiker.Iterations;
                 }
 
                 // Hide current hand
-                var currentHand = Grid.Children[2] as CachedImage;
-                if (currentHand != null)
+                if (Grid.Children[2] is CachedImage currentHand)
                     currentHand.Source = Constants.HandSequence[nextHandIndex];
 
             });

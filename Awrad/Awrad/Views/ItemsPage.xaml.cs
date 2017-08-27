@@ -18,7 +18,7 @@ namespace Awrad.Views
 
         // Saves the main page bar color
         public Color? MainPageBarColor { get; set; }
-        public Dictionary<int, WirdDetailPage> WirdPagesDictionary { get; private set; }
+        public Dictionary<int, WirdDetailPage> WirdPagesDictionary { get; }
 
         public ItemsPage()
         {
@@ -35,8 +35,7 @@ namespace Awrad.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var wird = args.SelectedItem as WirdClass;
-            if (wird == null)
+            if (!(args.SelectedItem is WirdClass wird))
                 return;
 
             // Push the page on the navigation stack
@@ -62,8 +61,7 @@ namespace Awrad.Views
             await Navigation.PushAsync(wirdDetailPage);
 
             // Set the navigation bar color
-            var mainPage = Application.Current.MainPage as NavigationPage;
-            if (mainPage != null)
+            if (Application.Current.MainPage is NavigationPage mainPage)
             {
                 MainPageBarColor = mainPage.BarBackgroundColor;
                 mainPage.BarBackgroundColor = Color.FromHex(wird.Accent.Substring(1));
@@ -91,7 +89,6 @@ namespace Awrad.Views
                 }
                 mainPage.BarBackgroundColor = MainPageBarColor.Value;
             }
-
         }
     }
 }
