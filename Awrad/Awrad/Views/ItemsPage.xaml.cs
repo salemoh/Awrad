@@ -50,16 +50,14 @@ namespace Awrad.Views
             {
                 wirdDetailPage = new WirdDetailPage(new WirdDetailViewModel(wird));
                 WirdPagesDictionary[wird.Id] = wirdDetailPage;
-                wird.LastAccessTimestamp = DateTime.UtcNow;
-                await App.Database.SaveWirdAsync(wird);
 
             }
             else if (WirdPagesDictionary.ContainsKey(wird.Id))
             {
                 wirdDetailPage = WirdPagesDictionary[wird.Id];
-                wird.LastAccessTimestamp = DateTime.UtcNow;
-                await App.Database.SaveWirdAsync(wird);
             }
+            wird.LastAccessTimestamp = DateTime.UtcNow;
+            await App.Database.SaveWirdAsync(wird);
 
             await Navigation.PushAsync(wirdDetailPage);
 
