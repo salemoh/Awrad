@@ -48,6 +48,7 @@
     <Compile Include="Models\BaseDataObject.cs" />
     <Compile Include="Models\HeaderImage.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\RelatedThikerClass.cs" />
     <Compile Include="Models\ThikerClass.cs" />
     <Compile Include="Models\WirdClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

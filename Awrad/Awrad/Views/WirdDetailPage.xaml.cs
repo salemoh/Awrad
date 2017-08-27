@@ -16,17 +16,19 @@ namespace Awrad.Views
 
         private const int ContentFontSize = 32;
 
+        private const int RelatedThikerSize = 0;
+
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
         public WirdDetailPage()
         {
             InitializeComponent();
         }
 
-        public WirdDetailPage(WirdDetailViewModel viewModel)
+        public WirdDetailPage(WirdDetailViewModel wirdDetailViewModel)
         {
             InitializeComponent();
 
-            BindingContext = this.viewModel = viewModel;
+            BindingContext = this.viewModel = wirdDetailViewModel;
 
         }
 
@@ -52,6 +54,12 @@ namespace Awrad.Views
                 // Lets await to fill the thiker
                 await viewModel.PopulateThiker();
 
+                // Lets await to fill the related thiker if such thiker is present
+                if(viewModel.Wird.RelatedThiker == "Y")
+                {
+                    await viewModel.PopulateRelatedThiker(RelatedThikerSize);
+                }
+
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     PopulateWirdPages();
@@ -70,7 +78,7 @@ namespace Awrad.Views
 
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
-            foreach (var thiker in viewModel.Wird.Thiker)
+            foreach (var thiker in viewModel.Wird.ThikerList)
             {
                 // We only publish a counting page if the Iterations > 1
                 var thikerPage = thiker.Iterations > 1 ? GetRtlCountingPage(padding, thiker) : 

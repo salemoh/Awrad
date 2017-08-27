@@ -37,6 +37,48 @@ namespace Awrad.Services
             return database.Table<ThikerClass>().Where(i => i.WirdType == wirdType).ToListAsync();
         }
 
+        // Get thiker from DB for a specific wird and size
+        public Task<List<ThikerClass>> GetThikerAsync(int wirdType, int thikerSize)
+        {
+            return database.Table<ThikerClass>().Where(i => i.WirdType == wirdType &&
+                                                            i.Size == thikerSize).ToListAsync();
+        }
+
+        public async Task<List<ThikerClass>> GetRelatedThikerAsync(int wirdType, int thikerSize)
+        {
+            // Get the list of target wird
+            var relatedThikerList = await database.Table<RelatedThikerClass>().Where(i => i.Wird == wirdType).ToListAsync();
+
+            // Iterate through the different wird and get the target thiker
+            var outputThikerList = new List<ThikerClass>();
+            foreach (var relatedThiker in relatedThikerList)
+            {
+                // Get list of thiker with a specific size
+                var thikerList = await GetThikerAsync(relatedThiker.RelatedWird, relatedThiker.ThikerSize);
+
+                // Get the current thiker from the list and add to output
+                outputThikerList.Add(thikerList[relatedThiker.CurrentThiker % thikerList.Count]);
+
+                // Update current thiker counter in related thiker
+                relatedThiker.CurrentThiker = (relatedThiker.CurrentThiker + 1) % thikerList.Count;
+                await SaveRelatedThikerAsync(relatedThiker);
+            }
+
+            return outputThikerList;
+        }
+
+        public Task<int> SaveRelatedThikerAsync(RelatedThikerClass relatedThiker)
+        {
+            if (relatedThiker.Id != 0)
+            {
+                return database.UpdateAsync(relatedThiker);
+            }
+            else
+            {
+                return database.InsertAsync(relatedThiker);
+            }
+        }
+
         public Task<int> SaveWirdAsync(WirdClass wird)
         {
             if (wird.Id != 0)
