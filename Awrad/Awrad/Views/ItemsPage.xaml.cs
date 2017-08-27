@@ -11,7 +11,7 @@ namespace Awrad.Views
     public partial class ItemsPage : ContentPage
     {
         // Give the user up to 60 minutes before resetting the thiker page
-        private const int WirdTimespanIncrement = 1;
+        private const int WirdTimespanIncrement = 60;
 
         // Used to load all wirds
         private readonly WirdViewModel _wirdViewModel;

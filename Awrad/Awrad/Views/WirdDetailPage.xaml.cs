@@ -102,6 +102,20 @@ namespace Awrad.Views
                 Children.Add(thikerPage);
             }
 
+            // If there are related thiker add in proper RTL order
+            if (viewModel.Wird.RelatedThiker != null)
+            {
+                foreach (var relatedThiker in Enumerable.Reverse(viewModel.Wird.RelatedThikerList))
+                {
+                    // We only publish a counting page if the Iterations > 1
+                    var thikerPage = relatedThiker.Iterations > 1 ? GetRtlCountingPage(padding, relatedThiker) :
+                        GetRtlContentPage(padding, relatedThiker.Content);
+
+                    // Add to the pages in reverse order
+                    Children.Add(thikerPage);
+                }
+            }
+
             // If there is an introduction page add it
             if (!IsNullOrWhiteSpace(viewModel.Wird.Introduction))
             {
