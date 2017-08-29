@@ -214,7 +214,7 @@ namespace Awrad.Views
                             {
                                 Text = title,
                                 FontSize = TitleFontSize,
-                                TextColor = Color.DarkOrange,
+                                TextColor = Color.Brown,
                                 HorizontalOptions = LayoutOptions.FillAndExpand,
                                 HorizontalTextAlignment = TextAlignment.Center,
                                 FontFamily = _fontFamily
