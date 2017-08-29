@@ -14,6 +14,8 @@ namespace Awrad.Views
     {
         private readonly WirdDetailViewModel _viewModel;
 
+        private readonly string _fontFamily;
+
         private const int ContentFontSize = 32;
 
         private const int RelatedThikerSize = 0;
@@ -29,6 +31,17 @@ namespace Awrad.Views
             InitializeComponent();
 
             BindingContext = _viewModel = wirdDetailViewModel;
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    _fontFamily = "Arabic Typesetting";
+                    break;
+
+                case Device.Android:
+                    _fontFamily = "arabtype.ttf#Arabic Typesetting";
+                    break;
+            }
 
         }
 
@@ -72,9 +85,18 @@ namespace Awrad.Views
 
         private void PopulateWirdPages()
         {
+            double paddingValue = 0;
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                case Device.Android:
+                    paddingValue = 20;
+                    break;
+            }
+
             // Border padding
-            var padding = new Thickness(Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0),
-                Device.OnPlatform(20, 20, 0), Device.OnPlatform(20, 20, 0));
+            var padding = new Thickness(paddingValue, paddingValue, paddingValue, paddingValue);
 
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
@@ -155,10 +177,7 @@ namespace Awrad.Views
                                 FontSize = ContentFontSize,
                                 HorizontalOptions = LayoutOptions.FillAndExpand,
                                 HorizontalTextAlignment = TextAlignment.End,
-                                FontFamily = Device.OnPlatform(
-                                    "Arabic Typesetting",
-                                    "arabtype.ttf#Arabic Typesetting",
-                                    null)
+                                FontFamily = _fontFamily
                             },
                         }
                     }
@@ -191,10 +210,7 @@ namespace Awrad.Views
                 FontSize = ContentFontSize,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HorizontalTextAlignment = TextAlignment.End,
-                FontFamily = Device.OnPlatform(
-                    "Arabic Typesetting",
-                    "arabtype.ttf#Arabic Typesetting",
-                    null)
+                FontFamily = _fontFamily
             };
 
             var counterLabel = new Label
