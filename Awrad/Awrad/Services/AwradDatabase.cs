@@ -55,9 +55,13 @@ namespace Awrad.Services
             {
                 // Get list of thiker with a specific size
                 var thikerList = await GetThikerAsync(relatedThiker.RelatedWird, relatedThiker.ThikerSize);
+                var thiker = thikerList[relatedThiker.CurrentThiker % thikerList.Count];
+                
+                // Add title to thiker content
+                thiker.Content = relatedThiker.Description + "\n" + thiker.Content;
 
                 // Get the current thiker from the list and add to output
-                outputThikerList.Add(thikerList[relatedThiker.CurrentThiker % thikerList.Count]);
+                outputThikerList.Add(thiker);
 
                 // Update current thiker counter in related thiker
                 relatedThiker.CurrentThiker = (relatedThiker.CurrentThiker + 1) % thikerList.Count;

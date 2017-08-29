@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Awrad.Helpers;
@@ -17,6 +18,7 @@ namespace Awrad.Views
         private readonly string _fontFamily;
 
         private const int ContentFontSize = 32;
+        private const int TitleFontSize = 40;
 
         private const int RelatedThikerSize = 0;
 
@@ -131,7 +133,7 @@ namespace Awrad.Views
                 {
                     // We only publish a counting page if the Iterations > 1
                     var thikerPage = relatedThiker.Iterations > 1 ? GetRtlCountingPage(padding, relatedThiker) :
-                        GetRtlContentPage(padding, relatedThiker.Content);
+                        GetRtlTitleContentPage(padding, relatedThiker.Content);
 
                     // Add to the pages in reverse order
                     Children.Add(thikerPage);
@@ -174,6 +176,52 @@ namespace Awrad.Views
                             new Label
                             {
                                 Text = content,
+                                FontSize = ContentFontSize,
+                                HorizontalOptions = LayoutOptions.FillAndExpand,
+                                HorizontalTextAlignment = TextAlignment.End,
+                                FontFamily = _fontFamily
+                            },
+                        }
+                    }
+                }
+            };
+            return contentPage;
+        }
+
+        /// <summary>
+        /// Create a content page to be used for intro and sum
+        /// </summary>
+        /// <param name="padding"></param>
+        /// <param name="content"></param>
+        /// <returns></returns>
+        private ContentPage GetRtlTitleContentPage(Thickness padding, string content)
+        {
+            // Extract the tile which is the first line of the content
+            var titleLocation = content.IndexOf(Environment.NewLine, StringComparison.Ordinal);
+            var title = content.Substring(0, titleLocation);
+            var contentNoTitle = content.Substring(titleLocation + 1);
+            
+            var contentPage = new ContentPage
+            {
+                Padding = padding,
+                Content = new ScrollView
+                {
+                    Content = new StackLayout
+                    {
+                        Children =
+                        {
+                            new Label
+                            {
+                                Text = title,
+                                FontSize = TitleFontSize,
+                                TextColor = Color.DarkOrange,
+                                HorizontalOptions = LayoutOptions.FillAndExpand,
+                                HorizontalTextAlignment = TextAlignment.Center,
+                                FontFamily = _fontFamily
+                            },
+                            new Label
+                            {
+                                Text = contentNoTitle,
                                 FontSize = ContentFontSize,
                                 HorizontalOptions = LayoutOptions.FillAndExpand,
                                 HorizontalTextAlignment = TextAlignment.End,
