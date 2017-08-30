@@ -15,7 +15,7 @@ namespace Awrad.Models
         public string Summary { get; set; } // Summary of the wird
         public string Accent { get; set; } // Location of image accents to display as border for wird
         public DateTime LastAccessTimestamp { get; set; } // Last time this Wird was accessed
-        public String RelatedThiker { get; set; } // If =Y then we check the related thiker table 
+        public String RelatedThiker { get; set; } // If =Y then we check the related thiker table
 
         [Ignore]
         public List<ThikerClass> ThikerList { get; set; } // The list of thiker as part of this WirdClass

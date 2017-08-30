@@ -15,7 +15,8 @@ namespace Awrad.Models
         public int MinIerations { get; set; } // Minimum number of iterations
         public int MaxIterations { get; set; } // Maximum iterations
         public int Size { get; set; } // Shirt size of the thiker. 0=Small, 1=Med, 2=Large
-        
+        public int ThikerGroup { get; set; } // Page where to display the different thiker
+
         public string Content { get; set; } // Content of the thiker
         public string Referrence { get; set; } // The reference to a thiker
         public string Virtue { get; set; } // Virtue gained by reciting this thiker

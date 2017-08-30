@@ -70,7 +70,7 @@ namespace Awrad.Views
                 await _viewModel.PopulateThiker();
 
                 // Lets await to fill the related thiker if such thiker is present
-                if(_viewModel.Wird.RelatedThiker == "Y")
+                if (_viewModel.Wird.RelatedThiker == "Y")
                 {
                     await _viewModel.PopulateRelatedThiker(RelatedThikerSize);
                 }
@@ -102,11 +102,36 @@ namespace Awrad.Views
 
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
-            foreach (var thiker in _viewModel.Wird.ThikerList)
+            for (var thikerId = 0; thikerId < _viewModel.Wird.ThikerList.Count; thikerId++)
             {
+                var thiker = _viewModel.Wird.ThikerList[thikerId];
+                ContentPage thikerPage;
+                // For thiker with iteration > 1 we publish one thiker per page
+
                 // We only publish a counting page if the Iterations > 1
-                var thikerPage = thiker.Iterations > 1 ? GetRtlCountingPage(padding, thiker) : 
-                    GetRtlContentPage(padding, thiker.Content);
+                if (thiker.Iterations > 1)
+                {
+                    thikerPage = GetRtlCountingPage(padding, thiker);
+                }
+                else
+                {
+                    // Combine the content if the thiker is part of the same group
+                    var content = thiker.Content;
+                    var thikerGroup = thiker.ThikerGroup;
+
+                    if (thikerGroup != 0)
+                    {
+                        while (thikerId < _viewModel.Wird.ThikerList.Count - 1 &&
+                            thikerGroup == _viewModel.Wird.ThikerList[thikerId + 1].ThikerGroup)
+                        {
+                            content += Environment.NewLine + Environment.NewLine +
+                                _viewModel.Wird.ThikerList[thikerId + 1].Content;
+                            thikerId++;
+                        }
+                    }
+
+                    thikerPage = GetRtlContentPage(padding, content);
+                }
 
                 // Add page to list
                 thikerPages.Add(thikerPage);
@@ -127,7 +152,7 @@ namespace Awrad.Views
             }
 
             // If there are related thiker add in proper RTL order
-            if (_viewModel.Wird.RelatedThiker != null)
+            if (_viewModel.Wird.RelatedThiker == "Y")
             {
                 foreach (var relatedThiker in Enumerable.Reverse(_viewModel.Wird.RelatedThikerList))
                 {
@@ -200,7 +225,7 @@ namespace Awrad.Views
             var titleLocation = content.IndexOf(Environment.NewLine, StringComparison.Ordinal);
             var title = content.Substring(0, titleLocation);
             var contentNoTitle = content.Substring(titleLocation + 1);
-            
+
             var contentPage = new ContentPage
             {
                 Padding = padding,
@@ -246,11 +271,11 @@ namespace Awrad.Views
             var grid = new Grid();
 
             // Define our grid columns
-            grid.RowDefinitions.Add(new RowDefinition() {Height = new GridLength(1, GridUnitType.Star)});
-            grid.RowDefinitions.Add(new RowDefinition() {Height = new GridLength(100)});
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(100) });
 
-            grid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
-            grid.ColumnDefinitions.Add(new ColumnDefinition {Width = new GridLength(1, GridUnitType.Star)});
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
 
             var contentLabel = new Label
             {
