@@ -14,12 +14,10 @@ namespace Awrad.Views
     public partial class WirdDetailPage
     {
         private readonly WirdDetailViewModel _viewModel;
-
         private readonly string _fontFamily;
-
+        private readonly string _quranFontFamily;
         private const int ContentFontSize = 32;
         private const int TitleFontSize = 40;
-
         private const int RelatedThikerSize = 0;
 
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
@@ -42,6 +40,17 @@ namespace Awrad.Views
 
                 case Device.Android:
                     _fontFamily = "arabtype.ttf#Arabic Typesetting";
+                    break;
+            }
+
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    _quranFontFamily = "KFGQPC Uthmanic Script HAFS";
+                    break;
+
+                case Device.Android:
+                    _quranFontFamily = "UthmanicHafs.otf#KFGQPC Uthmanic Script HAFS";
                     break;
             }
 
@@ -130,7 +139,7 @@ namespace Awrad.Views
                         }
                     }
 
-                    thikerPage = GetRtlContentPage(padding, content);
+                    thikerPage = GetRtlContentPage(padding, content, thiker.Type == (int) ThikerTypes.Quran);
                 }
 
                 // Add page to list
@@ -158,7 +167,8 @@ namespace Awrad.Views
                 {
                     // We only publish a counting page if the Iterations > 1
                     var thikerPage = relatedThiker.Iterations > 1 ? GetRtlCountingPage(padding, relatedThiker) :
-                        GetRtlTitleContentPage(padding, relatedThiker.Content);
+                        GetRtlTitleContentPage(padding, relatedThiker.Content,
+                            relatedThiker.Type == (int)ThikerTypes.Quran);
 
                     // Add to the pages in reverse order
                     Children.Add(thikerPage);
@@ -179,6 +189,8 @@ namespace Awrad.Views
             }
         }
 
+
+
         #region Create Pages
 
         /// <summary>
@@ -186,8 +198,10 @@ namespace Awrad.Views
         /// </summary>
         /// <param name="padding"></param>
         /// <param name="content"></param>
+        /// <param name="quran"></param>
         /// <returns></returns>
-        private ContentPage GetRtlContentPage(Thickness padding, string content)
+        private ContentPage GetRtlContentPage(Thickness padding, string content, 
+            bool quran = false)
         {
             var contentPage = new ContentPage
             {
@@ -204,7 +218,7 @@ namespace Awrad.Views
                                 FontSize = ContentFontSize,
                                 HorizontalOptions = LayoutOptions.FillAndExpand,
                                 HorizontalTextAlignment = TextAlignment.End,
-                                FontFamily = _fontFamily
+                                FontFamily = quran ? _quranFontFamily : _fontFamily
                             },
                         }
                     }
@@ -218,8 +232,10 @@ namespace Awrad.Views
         /// </summary>
         /// <param name="padding"></param>
         /// <param name="content"></param>
+        /// <param name="quran"></param>
         /// <returns></returns>
-        private ContentPage GetRtlTitleContentPage(Thickness padding, string content)
+        private ContentPage GetRtlTitleContentPage(Thickness padding, string content,
+            bool quran = false)
         {
             // Extract the tile which is the first line of the content
             var titleLocation = content.IndexOf(Environment.NewLine, StringComparison.Ordinal);
@@ -250,7 +266,7 @@ namespace Awrad.Views
                                 FontSize = ContentFontSize,
                                 HorizontalOptions = LayoutOptions.FillAndExpand,
                                 HorizontalTextAlignment = TextAlignment.End,
-                                FontFamily = _fontFamily
+                                FontFamily = quran ? _quranFontFamily : _fontFamily
                             },
                         }
                     }
@@ -282,7 +298,7 @@ namespace Awrad.Views
                 FontSize = ContentFontSize,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HorizontalTextAlignment = TextAlignment.End,
-                FontFamily = _fontFamily
+                FontFamily = thiker.Type == (int) ThikerTypes.Quran ? _quranFontFamily : _fontFamily
             };
 
             var counterLabel = new Label
