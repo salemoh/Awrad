@@ -171,6 +171,7 @@
     <BundleResource Include="Resources\arabtype.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <AndroidAsset Include="Resources\UthmanicHafs.otf" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileHelper.cs" />

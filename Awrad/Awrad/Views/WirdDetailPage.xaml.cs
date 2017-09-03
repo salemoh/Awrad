@@ -259,7 +259,6 @@ namespace Awrad.Views
             return contentPage;
         }
 
-
         /// <summary>
         /// Generates a counting page for a thiker
         /// </summary>
