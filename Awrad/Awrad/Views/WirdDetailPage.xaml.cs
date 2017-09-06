@@ -30,13 +30,13 @@ namespace Awrad.Views
             BindingContext = _viewModel = wirdDetailViewModel;
         }
 
+        /// <inheritdoc />
+        /// <summary>
+        /// Populate the pages on appearing
+        /// </summary>
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
-            // If not yet, load the thiker from DB on appearing
-            //if (viewModel.WirdClass.ThikerClass == null || viewModel.WirdClass.ThikerClass.Count == 0)
-            //    viewModel.LoadThikerCommand.Execute(null);
 
             // If we have children don't populate again
             if (Children.Count > 0)
@@ -68,43 +68,13 @@ namespace Awrad.Views
             });
         }
 
+        /// <summary>
+        /// Populate pages based on the wird
+        /// </summary>
         private void PopulateWirdPages()
         {
-            // Populate the thiker pages
-            var thikerPages = new List<ContentPage>();
-            for (var thikerId = 0; thikerId < _viewModel.Wird.ThikerList.Count; thikerId++)
-            {
-                var thiker = _viewModel.Wird.ThikerList[thikerId];
-                ContentPage thikerPage;                
-
-                if (thiker.Iterations > 1)
-                {
-                    // For thiker with iteration > 1 we publish one thiker per page
-                    thikerPage = new RtlCountingPage(Constants.Padding, thiker, _viewModel.Wird.Accent);
-                }
-                else
-                {
-                    // Combine the content if the thiker is part of the same group
-                    var content = thiker.Content;
-                    var thikerGroup = thiker.ThikerGroup;
-
-                    if (thikerGroup != 0)
-                    {
-                        while (thikerId < _viewModel.Wird.ThikerList.Count - 1 &&
-                            thikerGroup == _viewModel.Wird.ThikerList[thikerId + 1].ThikerGroup)
-                        {
-                            content += Environment.NewLine + Environment.NewLine +
-                                _viewModel.Wird.ThikerList[thikerId + 1].Content;
-                            thikerId++;
-                        }
-                    }
-
-                    thikerPage = new RtlContentPage(Constants.Padding, content, thiker.Type == (int)ThikerTypes.Quran);
-                }
-
-                // Add page to list
-                thikerPages.Add(thikerPage);
-            }
+            // Get thiker pages
+            var thikerPages = GetThikerPages();
 
             // Add the summary page
             if (!IsNullOrWhiteSpace(_viewModel.Wird.Summary))
@@ -123,17 +93,7 @@ namespace Awrad.Views
             // If there are related thiker add in proper RTL order
             if (_viewModel.Wird.RelatedThiker == "Y")
             {
-                foreach (var relatedThiker in Enumerable.Reverse(_viewModel.Wird.RelatedThikerList))
-                {
-                    // We only publish a counting page if the Iterations > 1
-                    var thikerPage = relatedThiker.Iterations > 1 ?
-                        (ContentPage)new RtlCountingPage(Constants.Padding, relatedThiker, _viewModel.Wird.Accent) :
-                        (ContentPage)new RtlTitleContentPage(Constants.Padding, relatedThiker.Content,
-                            relatedThiker.Type == (int)ThikerTypes.Quran);
-
-                    // Add to the pages in reverse order
-                    Children.Add(thikerPage);
-                }
+                GetRelatedThikerPages();
             }
 
             // If there is an introduction page add it
@@ -148,6 +108,60 @@ namespace Awrad.Views
             {
                 CurrentPage = Children[Children.Count - 1];
             }
+        }
+
+        private void GetRelatedThikerPages()
+        {
+            foreach (var relatedThiker in Enumerable.Reverse(_viewModel.Wird.RelatedThikerList))
+            {
+                // We only publish a counting page if the Iterations > 1
+                var thikerPage = relatedThiker.Iterations > 1 ?
+                    (ContentPage)new RtlCountingPage(Constants.Padding, relatedThiker, _viewModel.Wird.Accent) :
+                    (ContentPage)new RtlTitleContentPage(Constants.Padding, relatedThiker.Content,
+                        relatedThiker.Type == (int)ThikerTypes.Quran);
+
+                // Add to the pages in reverse order
+                Children.Add(thikerPage);
+            }
+        }
+
+        private List<ContentPage> GetThikerPages()
+        {
+            var thikerPages = new List<ContentPage>();
+            for (var thikerId = 0; thikerId < _viewModel.Wird.ThikerList.Count; thikerId++)
+            {
+                var thiker = _viewModel.Wird.ThikerList[thikerId];
+                ContentPage thikerPage;
+
+                if (thiker.Iterations > 1)
+                {
+                    // For thiker with iteration > 1 we publish one thiker per page
+                    thikerPage = new RtlCountingPage(Constants.Padding, thiker, _viewModel.Wird.Accent);
+                }
+                else
+                {
+                    // Combine the content if the thiker is part of the same group
+                    var content = thiker.Content;
+                    var thikerGroup = thiker.ThikerGroup;
+
+                    if (thikerGroup != 0)
+                    {
+                        while (thikerId < _viewModel.Wird.ThikerList.Count - 1 &&
+                               thikerGroup == _viewModel.Wird.ThikerList[thikerId + 1].ThikerGroup)
+                        {
+                            content += Environment.NewLine + Environment.NewLine +
+                                       _viewModel.Wird.ThikerList[thikerId + 1].Content;
+                            thikerId++;
+                        }
+                    }
+
+                    thikerPage = new RtlContentPage(Constants.Padding, content, thiker.Type == (int) ThikerTypes.Quran);
+                }
+
+                // Add page to list
+                thikerPages.Add(thikerPage);
+            }
+            return thikerPages;
         }
     }
 }
