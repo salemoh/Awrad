@@ -11,9 +11,11 @@ namespace Awrad.Views
 {
     public partial class WirdDetailPage
     {
+        /// <summary>
+        /// The wird view model
+        /// </summary>
         private readonly WirdDetailViewModel _viewModel;
-
-
+        
 
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
         public WirdDetailPage()
@@ -73,12 +75,11 @@ namespace Awrad.Views
             for (var thikerId = 0; thikerId < _viewModel.Wird.ThikerList.Count; thikerId++)
             {
                 var thiker = _viewModel.Wird.ThikerList[thikerId];
-                ContentPage thikerPage;
-                // For thiker with iteration > 1 we publish one thiker per page
+                ContentPage thikerPage;                
 
-                // We only publish a counting page if the Iterations > 1
                 if (thiker.Iterations > 1)
                 {
+                    // For thiker with iteration > 1 we publish one thiker per page
                     thikerPage = new RtlCountingPage(Constants.Padding, thiker, _viewModel.Wird.Accent);
                 }
                 else

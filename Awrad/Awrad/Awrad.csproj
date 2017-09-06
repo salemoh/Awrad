@@ -39,7 +39,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Constants.cs" />
-    <Compile Include="Helpers\ContentClass.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Helpers\IFileHelper.cs" />
     <Compile Include="Helpers\IShareHelper.cs" />
