@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Awrad.Helpers;
-using Awrad.Models;
 using Awrad.ViewModels;
-using FFImageLoading.Forms;
 using Xamarin.Forms;
 using static System.String;
 
@@ -14,11 +12,8 @@ namespace Awrad.Views
     public partial class WirdDetailPage
     {
         private readonly WirdDetailViewModel _viewModel;
-        private readonly string _fontFamily;
-        private readonly string _quranFontFamily;
-        private const int ContentFontSize = 32;
-        private const int TitleFontSize = 40;
-        private const int RelatedThikerSize = 0;
+
+
 
         // Note - The Xamarin.Forms Previewer requires a default, parameterless constructor to render a page.
         public WirdDetailPage()
@@ -31,29 +26,6 @@ namespace Awrad.Views
             InitializeComponent();
 
             BindingContext = _viewModel = wirdDetailViewModel;
-
-            switch (Device.RuntimePlatform)
-            {
-                case Device.iOS:
-                    _fontFamily = "Arabic Typesetting";
-                    break;
-
-                case Device.Android:
-                    _fontFamily = "arabtype.ttf#Arabic Typesetting";
-                    break;
-            }
-
-            switch (Device.RuntimePlatform)
-            {
-                case Device.iOS:
-                    _quranFontFamily = "KFGQPC Uthmanic Script HAFS";
-                    break;
-
-                case Device.Android:
-                    _quranFontFamily = "UthmanicHafs.otf#KFGQPC Uthmanic Script HAFS";
-                    break;
-            }
-
         }
 
         protected override async void OnAppearing()
@@ -81,7 +53,7 @@ namespace Awrad.Views
                 // Lets await to fill the related thiker if such thiker is present
                 if (_viewModel.Wird.RelatedThiker == "Y")
                 {
-                    await _viewModel.PopulateRelatedThiker(RelatedThikerSize);
+                    await _viewModel.PopulateRelatedThiker(Constants.RelatedThikerSize);
                 }
 
                 Device.BeginInvokeOnMainThread(() =>
@@ -96,19 +68,6 @@ namespace Awrad.Views
 
         private void PopulateWirdPages()
         {
-            double paddingValue = 0;
-
-            switch (Device.RuntimePlatform)
-            {
-                case Device.iOS:
-                case Device.Android:
-                    paddingValue = 20;
-                    break;
-            }
-
-            // Border padding
-            var padding = new Thickness(paddingValue, paddingValue, paddingValue, paddingValue);
-
             // Populate the thiker pages
             var thikerPages = new List<ContentPage>();
             for (var thikerId = 0; thikerId < _viewModel.Wird.ThikerList.Count; thikerId++)
@@ -120,7 +79,7 @@ namespace Awrad.Views
                 // We only publish a counting page if the Iterations > 1
                 if (thiker.Iterations > 1)
                 {
-                    thikerPage = GetRtlCountingPage(padding, thiker);
+                    thikerPage = new RtlCountingPage(Constants.Padding, thiker, _viewModel.Wird.Accent);
                 }
                 else
                 {
@@ -139,7 +98,7 @@ namespace Awrad.Views
                         }
                     }
 
-                    thikerPage = GetRtlContentPage(padding, content, thiker.Type == (int) ThikerTypes.Quran);
+                    thikerPage = new RtlContentPage(Constants.Padding, content, thiker.Type == (int)ThikerTypes.Quran);
                 }
 
                 // Add page to list
@@ -149,7 +108,7 @@ namespace Awrad.Views
             // Add the summary page
             if (!IsNullOrWhiteSpace(_viewModel.Wird.Summary))
             {
-                var summaryPage = GetRtlContentPage(padding, _viewModel.Wird.Summary);
+                var summaryPage = new RtlContentPage(Constants.Padding, _viewModel.Wird.Summary);
                 Children.Add(summaryPage);
             }
 
@@ -166,8 +125,9 @@ namespace Awrad.Views
                 foreach (var relatedThiker in Enumerable.Reverse(_viewModel.Wird.RelatedThikerList))
                 {
                     // We only publish a counting page if the Iterations > 1
-                    var thikerPage = relatedThiker.Iterations > 1 ? GetRtlCountingPage(padding, relatedThiker) :
-                        GetRtlTitleContentPage(padding, relatedThiker.Content,
+                    var thikerPage = relatedThiker.Iterations > 1 ?
+                        (ContentPage)new RtlCountingPage(Constants.Padding, relatedThiker, _viewModel.Wird.Accent) :
+                        (ContentPage)new RtlTitleContentPage(Constants.Padding, relatedThiker.Content,
                             relatedThiker.Type == (int)ThikerTypes.Quran);
 
                     // Add to the pages in reverse order
@@ -178,7 +138,7 @@ namespace Awrad.Views
             // If there is an introduction page add it
             if (!IsNullOrWhiteSpace(_viewModel.Wird.Introduction))
             {
-                var introductionPage = GetRtlContentPage(padding, _viewModel.Wird.Introduction);
+                var introductionPage = new RtlContentPage(Constants.Padding, _viewModel.Wird.Introduction);
                 Children.Add(introductionPage);
             }
 
@@ -188,162 +148,5 @@ namespace Awrad.Views
                 CurrentPage = Children[Children.Count - 1];
             }
         }
-
-
-
-        #region Create Pages
-
-        /// <summary>
-        /// Create a content page to be used for intro and sum
-        /// </summary>
-        /// <param name="padding"></param>
-        /// <param name="content"></param>
-        /// <param name="quran"></param>
-        /// <returns></returns>
-        private ContentPage GetRtlContentPage(Thickness padding, string content, 
-            bool quran = false)
-        {
-            var contentPage = new ContentPage
-            {
-                Padding = padding,
-                Content = new ScrollView
-                {
-                    Content = new StackLayout
-                    {
-                        Children =
-                        {
-                            new Label
-                            {
-                                Text = content,
-                                FontSize = ContentFontSize,
-                                HorizontalOptions = LayoutOptions.FillAndExpand,
-                                HorizontalTextAlignment = TextAlignment.End,
-                                FontFamily = quran ? _quranFontFamily : _fontFamily
-                            },
-                        }
-                    }
-                }
-            };
-            return contentPage;
-        }
-
-        /// <summary>
-        /// Create a content page to be used for intro and sum
-        /// </summary>
-        /// <param name="padding"></param>
-        /// <param name="content"></param>
-        /// <param name="quran"></param>
-        /// <returns></returns>
-        private ContentPage GetRtlTitleContentPage(Thickness padding, string content,
-            bool quran = false)
-        {
-            // Extract the tile which is the first line of the content
-            var titleLocation = content.IndexOf(Environment.NewLine, StringComparison.Ordinal);
-            var title = content.Substring(0, titleLocation);
-            var contentNoTitle = content.Substring(titleLocation + 1);
-
-            var contentPage = new ContentPage
-            {
-                Padding = padding,
-                Content = new ScrollView
-                {
-                    Content = new StackLayout
-                    {
-                        Children =
-                        {
-                            new Label
-                            {
-                                Text = title,
-                                FontSize = TitleFontSize,
-                                TextColor = Color.Brown,
-                                HorizontalOptions = LayoutOptions.FillAndExpand,
-                                HorizontalTextAlignment = TextAlignment.Center,
-                                FontFamily = _fontFamily
-                            },
-                            new Label
-                            {
-                                Text = contentNoTitle,
-                                FontSize = ContentFontSize,
-                                HorizontalOptions = LayoutOptions.FillAndExpand,
-                                HorizontalTextAlignment = TextAlignment.End,
-                                FontFamily = quran ? _quranFontFamily : _fontFamily
-                            },
-                        }
-                    }
-                }
-            };
-            return contentPage;
-        }
-
-        /// <summary>
-        /// Generates a counting page for a thiker
-        /// </summary>
-        /// <param name="padding"></param>
-        /// <param name="thiker"></param>
-        /// <returns></returns>
-        private ContentPage GetRtlCountingPage(Thickness padding, ThikerClass thiker)
-        {
-            var grid = new Grid();
-
-            // Define our grid columns
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(100) });
-
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-
-            var contentLabel = new Label
-            {
-                Text = thiker.Content,
-                FontSize = ContentFontSize,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                HorizontalTextAlignment = TextAlignment.End,
-                FontFamily = thiker.Type == (int) ThikerTypes.Quran ? _quranFontFamily : _fontFamily
-            };
-
-            var counterLabel = new Label
-            {
-                Text = "0\\" + thiker.Iterations,
-                FontSize = 30,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                HorizontalTextAlignment = TextAlignment.Center,
-                VerticalTextAlignment = TextAlignment.Center,
-                TextColor = Color.FromHex(_viewModel.Wird.Accent.Substring(1))
-            };
-
-            // Align the content and counting elements
-            grid.Children.Add(contentLabel, 0, 0);
-            Grid.SetColumnSpan(contentLabel, 2);
-            grid.Children.Add(counterLabel, 0, 1);
-
-            // Add the image for the hand
-            var handImage = new CachedImage
-            {
-                Source = Constants.HandSequence[0],
-                DownsampleWidth = 100,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center,
-            };
-
-            grid.Children.Add(handImage, 1, 1);
-
-            // Local method to be hooked to tap
-            void OnTapThiker(ThikerCounter thikerCounter) => thikerCounter.IncrementIteration();
-            var tapGesture = new TapGestureRecognizer
-            {
-                NumberOfTapsRequired = 1,
-                Command = new Command<ThikerCounter>(OnTapThiker),
-                CommandParameter = new ThikerCounter(thiker, grid)
-            };
-            grid.GestureRecognizers.Add(tapGesture);
-
-            return new ContentPage
-            {
-                Padding = padding,
-                Content = grid
-            };
-        }
-
-        #endregion
     }
 }

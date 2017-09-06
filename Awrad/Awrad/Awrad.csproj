@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Constants.cs" />
+    <Compile Include="Helpers\ContentClass.cs" />
     <Compile Include="Helpers\Enums.cs" />
     <Compile Include="Helpers\IFileHelper.cs" />
     <Compile Include="Helpers\IShareHelper.cs" />
@@ -63,6 +64,9 @@
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RtlContentPage.cs" />
+    <Compile Include="Views\RtlCountingPage.cs" />
+    <Compile Include="Views\RtlTitleContentPage.cs" />
     <Compile Include="Views\WirdDetailPage.xaml.cs">
       <DependentUpon>WirdDetailPage.xaml</DependentUpon>
     </Compile>
