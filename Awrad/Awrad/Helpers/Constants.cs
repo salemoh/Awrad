@@ -22,7 +22,7 @@ namespace Awrad.Helpers
         public const int QuranContentFontSize = 24;
         public const int TitleFontSize = 40;
         public const int RelatedThikerSize = 0;
-        public const double PaddingValue = 0;
+        public const double PaddingValue = 20;
 
         public static readonly Thickness Padding = new Thickness(PaddingValue, PaddingValue, PaddingValue, PaddingValue);
         public class Android
