@@ -25,7 +25,7 @@ namespace Awrad.Views
             var contentLabel = new Label
             {
                 Text = thiker.Content,
-                FontSize = Constants.ContentFontSize,
+                FontSize = thiker.Type == (int)ThikerTypes.Quran ? Constants.QuranContentFontSize : Constants.ContentFontSize,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HorizontalTextAlignment = TextAlignment.End,
                 FontFamily = thiker.Type == (int)ThikerTypes.Quran ? Constants.QuranFontFamilyName : Constants.ContentFontFamilyName

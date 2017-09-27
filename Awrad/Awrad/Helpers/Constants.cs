@@ -19,6 +19,7 @@ namespace Awrad.Helpers
         };
 
         public const int ContentFontSize = 32;
+        public const int QuranContentFontSize = 24;
         public const int TitleFontSize = 40;
         public const int RelatedThikerSize = 0;
         public const double PaddingValue = 0;

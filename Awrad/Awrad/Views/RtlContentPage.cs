@@ -27,7 +27,7 @@ namespace Awrad.Views
                         new Label
                         {
                             Text = content,
-                            FontSize = Constants.ContentFontSize,
+                            FontSize = quran ? Constants.QuranContentFontSize : Constants.ContentFontSize,
                             HorizontalOptions = LayoutOptions.FillAndExpand,
                             HorizontalTextAlignment = TextAlignment.End,
                             FontFamily = quran ? Constants.QuranFontFamilyName : Constants.ContentFontFamilyName
