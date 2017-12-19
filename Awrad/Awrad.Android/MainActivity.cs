@@ -21,7 +21,7 @@ namespace Awrad.Droid
 
             CarouselViewRenderer.Init();
 
-            CachedImageRenderer.Init();
+            CachedImageRenderer.Init(false);
 
             LoadApplication(new App());
         }
