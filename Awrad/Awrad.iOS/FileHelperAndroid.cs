@@ -5,10 +5,10 @@ using Awrad.Helpers;
 using Foundation;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(FileHelper))]
+[assembly: Dependency(typeof(FileHelperAndroid))]
 namespace Awrad.iOS
 {
-	public class FileHelper : IFileHelper
+	public class FileHelperAndroid : IFileHelper
 	{
 		public string GetLocalFilePath(string filename)
 		{
@@ -32,11 +32,11 @@ namespace Awrad.iOS
             void CopyDbIfNotExist()
             {
                 // In development we always deploy the asset DB in case of updates
-                //if (!File.Exists(dbPath))
-                //{
+                if (!File.Exists(dbPath))
+                {
                     var existingDb = NSBundle.MainBundle.PathForResource("Awrad", "sqlite");
                     File.Copy(existingDb, dbPath, true);
-                //}
+                }
             }
 
         }

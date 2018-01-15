@@ -17,7 +17,7 @@ namespace Awrad.Views
 
             // Define our grid columns
             grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(100) });
+            grid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(80) });
 
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
@@ -50,9 +50,9 @@ namespace Awrad.Views
             var handImage = new CachedImage
             {
                 Source = Constants.HandSequence[0],
-                DownsampleWidth = 100,
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.Center,
+                //DownsampleWidth = 120,
+                //HorizontalOptions = LayoutOptions.Center,
+                //VerticalOptions = LayoutOptions.Center,
             };
 
             grid.Children.Add(handImage, 1, 1);

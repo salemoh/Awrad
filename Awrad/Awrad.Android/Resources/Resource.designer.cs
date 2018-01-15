@@ -40,8 +40,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Animation.design_bottom_sheet_slide_out = global::Awrad.Droid.Resource.Animation.design_bottom_sheet_slide_out;
 			global::CarouselView.FormsPlugin.Android.Resource.Animation.design_snackbar_in = global::Awrad.Droid.Resource.Animation.design_snackbar_in;
 			global::CarouselView.FormsPlugin.Android.Resource.Animation.design_snackbar_out = global::Awrad.Droid.Resource.Animation.design_snackbar_out;
-			global::CarouselView.FormsPlugin.Android.Resource.Animation.tooltip_enter = global::Awrad.Droid.Resource.Animation.tooltip_enter;
-			global::CarouselView.FormsPlugin.Android.Resource.Animation.tooltip_exit = global::Awrad.Droid.Resource.Animation.tooltip_exit;
 			global::CarouselView.FormsPlugin.Android.Resource.Animator.design_appbar_state_list_animator = global::Awrad.Droid.Resource.Animator.design_appbar_state_list_animator;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.actionBarDivider = global::Awrad.Droid.Resource.Attribute.actionBarDivider;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.actionBarItemBackground = global::Awrad.Droid.Resource.Attribute.actionBarItemBackground;
@@ -83,15 +81,9 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.alertDialogTheme = global::Awrad.Droid.Resource.Attribute.alertDialogTheme;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.allowStacking = global::Awrad.Droid.Resource.Attribute.allowStacking;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.alpha = global::Awrad.Droid.Resource.Attribute.alpha;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.alphabeticModifiers = global::Awrad.Droid.Resource.Attribute.alphabeticModifiers;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.arrowHeadLength = global::Awrad.Droid.Resource.Attribute.arrowHeadLength;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.arrowShaftLength = global::Awrad.Droid.Resource.Attribute.arrowShaftLength;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.autoCompleteTextViewStyle = global::Awrad.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.autoSizeMaxTextSize = global::Awrad.Droid.Resource.Attribute.autoSizeMaxTextSize;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.autoSizeMinTextSize = global::Awrad.Droid.Resource.Attribute.autoSizeMinTextSize;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.autoSizePresetSizes = global::Awrad.Droid.Resource.Attribute.autoSizePresetSizes;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.autoSizeStepGranularity = global::Awrad.Droid.Resource.Attribute.autoSizeStepGranularity;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.autoSizeTextType = global::Awrad.Droid.Resource.Attribute.autoSizeTextType;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.background = global::Awrad.Droid.Resource.Attribute.background;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.backgroundSplit = global::Awrad.Droid.Resource.Attribute.backgroundSplit;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.backgroundStacked = global::Awrad.Droid.Resource.Attribute.backgroundStacked;
@@ -139,12 +131,10 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.colorControlActivated = global::Awrad.Droid.Resource.Attribute.colorControlActivated;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.colorControlHighlight = global::Awrad.Droid.Resource.Attribute.colorControlHighlight;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.colorControlNormal = global::Awrad.Droid.Resource.Attribute.colorControlNormal;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.colorError = global::Awrad.Droid.Resource.Attribute.colorError;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.colorPrimary = global::Awrad.Droid.Resource.Attribute.colorPrimary;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.colorPrimaryDark = global::Awrad.Droid.Resource.Attribute.colorPrimaryDark;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.colorSwitchThumbNormal = global::Awrad.Droid.Resource.Attribute.colorSwitchThumbNormal;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.commitIcon = global::Awrad.Droid.Resource.Attribute.commitIcon;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.contentDescription = global::Awrad.Droid.Resource.Attribute.contentDescription;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.contentInsetEnd = global::Awrad.Droid.Resource.Attribute.contentInsetEnd;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.contentInsetEndWithActions = global::Awrad.Droid.Resource.Attribute.contentInsetEndWithActions;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.contentInsetLeft = global::Awrad.Droid.Resource.Attribute.contentInsetLeft;
@@ -192,21 +182,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.expandedTitleTextAppearance = global::Awrad.Droid.Resource.Attribute.expandedTitleTextAppearance;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.externalRouteEnabledDrawable = global::Awrad.Droid.Resource.Attribute.externalRouteEnabledDrawable;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fabSize = global::Awrad.Droid.Resource.Attribute.fabSize;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fastScrollEnabled = global::Awrad.Droid.Resource.Attribute.fastScrollEnabled;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::Awrad.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::Awrad.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fastScrollVerticalThumbDrawable = global::Awrad.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fastScrollVerticalTrackDrawable = global::Awrad.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.font = global::Awrad.Droid.Resource.Attribute.font;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontFamily = global::Awrad.Droid.Resource.Attribute.fontFamily;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontProviderAuthority = global::Awrad.Droid.Resource.Attribute.fontProviderAuthority;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontProviderCerts = global::Awrad.Droid.Resource.Attribute.fontProviderCerts;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontProviderFetchStrategy = global::Awrad.Droid.Resource.Attribute.fontProviderFetchStrategy;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontProviderFetchTimeout = global::Awrad.Droid.Resource.Attribute.fontProviderFetchTimeout;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontProviderPackage = global::Awrad.Droid.Resource.Attribute.fontProviderPackage;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontProviderQuery = global::Awrad.Droid.Resource.Attribute.fontProviderQuery;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontStyle = global::Awrad.Droid.Resource.Attribute.fontStyle;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.fontWeight = global::Awrad.Droid.Resource.Attribute.fontWeight;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.foregroundInsidePadding = global::Awrad.Droid.Resource.Attribute.foregroundInsidePadding;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.gapBetweenBars = global::Awrad.Droid.Resource.Attribute.gapBetweenBars;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.goIcon = global::Awrad.Droid.Resource.Attribute.goIcon;
@@ -219,8 +194,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.homeAsUpIndicator = global::Awrad.Droid.Resource.Attribute.homeAsUpIndicator;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.homeLayout = global::Awrad.Droid.Resource.Attribute.homeLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.icon = global::Awrad.Droid.Resource.Attribute.icon;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.iconTint = global::Awrad.Droid.Resource.Attribute.iconTint;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.iconTintMode = global::Awrad.Droid.Resource.Attribute.iconTintMode;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.iconifiedByDefault = global::Awrad.Droid.Resource.Attribute.iconifiedByDefault;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.imageButtonStyle = global::Awrad.Droid.Resource.Attribute.imageButtonStyle;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.indeterminateProgressStyle = global::Awrad.Droid.Resource.Attribute.indeterminateProgressStyle;
@@ -263,7 +236,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.measureWithLargestChild = global::Awrad.Droid.Resource.Attribute.measureWithLargestChild;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.mediaRouteAudioTrackDrawable = global::Awrad.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.mediaRouteButtonStyle = global::Awrad.Droid.Resource.Attribute.mediaRouteButtonStyle;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.mediaRouteButtonTint = global::Awrad.Droid.Resource.Attribute.mediaRouteButtonTint;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.mediaRouteCloseDrawable = global::Awrad.Droid.Resource.Attribute.mediaRouteCloseDrawable;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::Awrad.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.mediaRouteDefaultIconDrawable = global::Awrad.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
@@ -279,7 +251,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.navigationContentDescription = global::Awrad.Droid.Resource.Attribute.navigationContentDescription;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.navigationIcon = global::Awrad.Droid.Resource.Attribute.navigationIcon;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.navigationMode = global::Awrad.Droid.Resource.Attribute.navigationMode;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.numericModifiers = global::Awrad.Droid.Resource.Attribute.numericModifiers;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.overlapAnchor = global::Awrad.Droid.Resource.Attribute.overlapAnchor;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.paddingBottomNoButtons = global::Awrad.Droid.Resource.Attribute.paddingBottomNoButtons;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.paddingEnd = global::Awrad.Droid.Resource.Attribute.paddingEnd;
@@ -396,9 +367,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.toolbarId = global::Awrad.Droid.Resource.Attribute.toolbarId;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.toolbarNavigationButtonStyle = global::Awrad.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.toolbarStyle = global::Awrad.Droid.Resource.Attribute.toolbarStyle;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.tooltipForegroundColor = global::Awrad.Droid.Resource.Attribute.tooltipForegroundColor;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.tooltipFrameBackground = global::Awrad.Droid.Resource.Attribute.tooltipFrameBackground;
-			global::CarouselView.FormsPlugin.Android.Resource.Attribute.tooltipText = global::Awrad.Droid.Resource.Attribute.tooltipText;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.track = global::Awrad.Droid.Resource.Attribute.track;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.trackTint = global::Awrad.Droid.Resource.Attribute.trackTint;
 			global::CarouselView.FormsPlugin.Android.Resource.Attribute.trackTintMode = global::Awrad.Droid.Resource.Attribute.trackTintMode;
@@ -490,7 +458,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Color.dim_foreground_disabled_material_light = global::Awrad.Droid.Resource.Color.dim_foreground_disabled_material_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.dim_foreground_material_dark = global::Awrad.Droid.Resource.Color.dim_foreground_material_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.dim_foreground_material_light = global::Awrad.Droid.Resource.Color.dim_foreground_material_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Color.error_color_material = global::Awrad.Droid.Resource.Color.error_color_material;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.foreground_material_dark = global::Awrad.Droid.Resource.Color.foreground_material_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.foreground_material_light = global::Awrad.Droid.Resource.Color.foreground_material_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.highlighted_text_material_dark = global::Awrad.Droid.Resource.Color.highlighted_text_material_dark;
@@ -530,8 +497,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Color.switch_thumb_material_light = global::Awrad.Droid.Resource.Color.switch_thumb_material_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.switch_thumb_normal_material_dark = global::Awrad.Droid.Resource.Color.switch_thumb_normal_material_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.switch_thumb_normal_material_light = global::Awrad.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Color.tooltip_background_dark = global::Awrad.Droid.Resource.Color.tooltip_background_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Color.tooltip_background_light = global::Awrad.Droid.Resource.Color.tooltip_background_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.vpi__background_holo_dark = global::Awrad.Droid.Resource.Color.vpi__background_holo_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.vpi__background_holo_light = global::Awrad.Droid.Resource.Color.vpi__background_holo_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Color.vpi__bright_foreground_disabled_holo_dark = global::Awrad.Droid.Resource.Color.vpi__bright_foreground_disabled_holo_dark;
@@ -617,11 +582,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.cardview_compat_inset_shadow = global::Awrad.Droid.Resource.Dimension.cardview_compat_inset_shadow;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.cardview_default_elevation = global::Awrad.Droid.Resource.Dimension.cardview_default_elevation;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.cardview_default_radius = global::Awrad.Droid.Resource.Dimension.cardview_default_radius;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::Awrad.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.compat_button_inset_vertical_material = global::Awrad.Droid.Resource.Dimension.compat_button_inset_vertical_material;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::Awrad.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.compat_button_padding_vertical_material = global::Awrad.Droid.Resource.Dimension.compat_button_padding_vertical_material;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.compat_control_corner_material = global::Awrad.Droid.Resource.Dimension.compat_control_corner_material;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.default_circle_indicator_radius = global::Awrad.Droid.Resource.Dimension.default_circle_indicator_radius;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.default_circle_indicator_stroke_width = global::Awrad.Droid.Resource.Dimension.default_circle_indicator_stroke_width;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.design_appbar_elevation = global::Awrad.Droid.Resource.Dimension.design_appbar_elevation;
@@ -664,9 +624,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.design_tab_text_size_2line = global::Awrad.Droid.Resource.Dimension.design_tab_text_size_2line;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.disabled_alpha_material_dark = global::Awrad.Droid.Resource.Dimension.disabled_alpha_material_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.disabled_alpha_material_light = global::Awrad.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.fastscroll_default_thickness = global::Awrad.Droid.Resource.Dimension.fastscroll_default_thickness;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.fastscroll_margin = global::Awrad.Droid.Resource.Dimension.fastscroll_margin;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.fastscroll_minimum_range = global::Awrad.Droid.Resource.Dimension.fastscroll_minimum_range;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.highlight_alpha_material_colored = global::Awrad.Droid.Resource.Dimension.highlight_alpha_material_colored;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.highlight_alpha_material_dark = global::Awrad.Droid.Resource.Dimension.highlight_alpha_material_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.highlight_alpha_material_light = global::Awrad.Droid.Resource.Dimension.highlight_alpha_material_light;
@@ -698,14 +655,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.notification_subtext_size = global::Awrad.Droid.Resource.Dimension.notification_subtext_size;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.notification_top_pad = global::Awrad.Droid.Resource.Dimension.notification_top_pad;
 			global::CarouselView.FormsPlugin.Android.Resource.Dimension.notification_top_pad_large_text = global::Awrad.Droid.Resource.Dimension.notification_top_pad_large_text;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.tooltip_corner_radius = global::Awrad.Droid.Resource.Dimension.tooltip_corner_radius;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.tooltip_horizontal_padding = global::Awrad.Droid.Resource.Dimension.tooltip_horizontal_padding;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.tooltip_margin = global::Awrad.Droid.Resource.Dimension.tooltip_margin;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::Awrad.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.tooltip_precise_anchor_threshold = global::Awrad.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.tooltip_vertical_padding = global::Awrad.Droid.Resource.Dimension.tooltip_vertical_padding;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.tooltip_y_offset_non_touch = global::Awrad.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
-			global::CarouselView.FormsPlugin.Android.Resource.Dimension.tooltip_y_offset_touch = global::Awrad.Droid.Resource.Dimension.tooltip_y_offset_touch;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::Awrad.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.abc_action_bar_item_background_material = global::Awrad.Droid.Resource.Drawable.abc_action_bar_item_background_material;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.abc_btn_borderless_material = global::Awrad.Droid.Resource.Drawable.abc_btn_borderless_material;
@@ -886,22 +835,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_21_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_22_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_22_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_23_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_23_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_23_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_23_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_24_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_24_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_24_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_24_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_25_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_25_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_25_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_25_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_26_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_26_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_26_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_26_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_27_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_27_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_27_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_27_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_28_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_28_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_28_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_28_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_29_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_29_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_29_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_29_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_30_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_30_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connected_30_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connected_30_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_00_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_00_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_01_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
@@ -948,22 +881,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_21_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_22_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_22_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_23_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_23_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_23_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_24_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_24_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_24_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_25_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_25_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_25_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_26_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_26_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_26_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_27_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_27_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_27_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_28_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_28_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_28_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_29_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_29_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_29_light;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_30_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_connecting_30_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_connecting_30_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_disabled_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_disabled_light = global::Awrad.Droid.Resource.Drawable.ic_mr_button_disabled_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.ic_mr_button_disconnected_dark = global::Awrad.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
@@ -1010,15 +927,7 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.notification_tile_bg = global::Awrad.Droid.Resource.Drawable.notification_tile_bg;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::Awrad.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.Prev = global::Awrad.Droid.Resource.Drawable.Prev;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.tooltip_frame_dark = global::Awrad.Droid.Resource.Drawable.tooltip_frame_dark;
-			global::CarouselView.FormsPlugin.Android.Resource.Drawable.tooltip_frame_light = global::Awrad.Droid.Resource.Drawable.tooltip_frame_light;
 			global::CarouselView.FormsPlugin.Android.Resource.Drawable.Up = global::Awrad.Droid.Resource.Drawable.Up;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.ALT = global::Awrad.Droid.Resource.Id.ALT;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.CTRL = global::Awrad.Droid.Resource.Id.CTRL;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.FUNCTION = global::Awrad.Droid.Resource.Id.FUNCTION;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.META = global::Awrad.Droid.Resource.Id.META;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.SHIFT = global::Awrad.Droid.Resource.Id.SHIFT;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.SYM = global::Awrad.Droid.Resource.Id.SYM;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.action0 = global::Awrad.Droid.Resource.Id.action0;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.action_bar = global::Awrad.Droid.Resource.Id.action_bar;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.action_bar_activity_content = global::Awrad.Droid.Resource.Id.action_bar_activity_content;
@@ -1043,10 +952,8 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Id.alertTitle = global::Awrad.Droid.Resource.Id.alertTitle;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.all = global::Awrad.Droid.Resource.Id.all;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.always = global::Awrad.Droid.Resource.Id.always;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.async = global::Awrad.Droid.Resource.Id.async;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.auto = global::Awrad.Droid.Resource.Id.auto;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.beginning = global::Awrad.Droid.Resource.Id.beginning;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.blocking = global::Awrad.Droid.Resource.Id.blocking;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.bottom = global::Awrad.Droid.Resource.Id.bottom;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.buttonPanel = global::Awrad.Droid.Resource.Id.buttonPanel;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.cancel_action = global::Awrad.Droid.Resource.Id.cancel_action;
@@ -1083,8 +990,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Id.fill_horizontal = global::Awrad.Droid.Resource.Id.fill_horizontal;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.fill_vertical = global::Awrad.Droid.Resource.Id.fill_vertical;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.@fixed = global::Awrad.Droid.Resource.Id.@fixed;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.forever = global::Awrad.Droid.Resource.Id.forever;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.ghost_view = global::Awrad.Droid.Resource.Id.ghost_view;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.home = global::Awrad.Droid.Resource.Id.home;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.homeAsUp = global::Awrad.Droid.Resource.Id.homeAsUp;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.horizontal = global::Awrad.Droid.Resource.Id.horizontal;
@@ -1094,7 +999,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Id.image = global::Awrad.Droid.Resource.Id.image;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.indicator = global::Awrad.Droid.Resource.Id.indicator;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.info = global::Awrad.Droid.Resource.Id.info;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.italic = global::Awrad.Droid.Resource.Id.italic;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.item_touch_helper_previous_elevation = global::Awrad.Droid.Resource.Id.item_touch_helper_previous_elevation;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.largeLabel = global::Awrad.Droid.Resource.Id.largeLabel;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.left = global::Awrad.Droid.Resource.Id.left;
@@ -1104,7 +1008,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Id.list_item = global::Awrad.Droid.Resource.Id.list_item;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.masked = global::Awrad.Droid.Resource.Id.masked;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.media_actions = global::Awrad.Droid.Resource.Id.media_actions;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.message = global::Awrad.Droid.Resource.Id.message;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.middle = global::Awrad.Droid.Resource.Id.middle;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.mini = global::Awrad.Droid.Resource.Id.mini;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.mr_art = global::Awrad.Droid.Resource.Id.mr_art;
@@ -1145,7 +1048,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Id.pager = global::Awrad.Droid.Resource.Id.pager;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.parallax = global::Awrad.Droid.Resource.Id.parallax;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.parentPanel = global::Awrad.Droid.Resource.Id.parentPanel;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.parent_matrix = global::Awrad.Droid.Resource.Id.parent_matrix;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.pin = global::Awrad.Droid.Resource.Id.pin;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.prev = global::Awrad.Droid.Resource.Id.prev;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.prevArrow = global::Awrad.Droid.Resource.Id.prevArrow;
@@ -1155,9 +1057,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Id.right = global::Awrad.Droid.Resource.Id.right;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.right_icon = global::Awrad.Droid.Resource.Id.right_icon;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.right_side = global::Awrad.Droid.Resource.Id.right_side;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.save_image_matrix = global::Awrad.Droid.Resource.Id.save_image_matrix;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.save_non_transition_alpha = global::Awrad.Droid.Resource.Id.save_non_transition_alpha;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.save_scale_type = global::Awrad.Droid.Resource.Id.save_scale_type;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.screen = global::Awrad.Droid.Resource.Id.screen;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.scroll = global::Awrad.Droid.Resource.Id.scroll;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.scrollIndicatorDown = global::Awrad.Droid.Resource.Id.scrollIndicatorDown;
@@ -1208,11 +1107,7 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Id.topPanel = global::Awrad.Droid.Resource.Id.topPanel;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.touch_outside = global::Awrad.Droid.Resource.Id.touch_outside;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.transition_current_scene = global::Awrad.Droid.Resource.Id.transition_current_scene;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.transition_layout_save = global::Awrad.Droid.Resource.Id.transition_layout_save;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.transition_position = global::Awrad.Droid.Resource.Id.transition_position;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.transition_scene_layoutid_cache = global::Awrad.Droid.Resource.Id.transition_scene_layoutid_cache;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.transition_transform = global::Awrad.Droid.Resource.Id.transition_transform;
-			global::CarouselView.FormsPlugin.Android.Resource.Id.uniform = global::Awrad.Droid.Resource.Id.uniform;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.up = global::Awrad.Droid.Resource.Id.up;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.useLogo = global::Awrad.Droid.Resource.Id.useLogo;
 			global::CarouselView.FormsPlugin.Android.Resource.Id.vertical = global::Awrad.Droid.Resource.Id.vertical;
@@ -1226,7 +1121,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Integer.app_bar_elevation_anim_duration = global::Awrad.Droid.Resource.Integer.app_bar_elevation_anim_duration;
 			global::CarouselView.FormsPlugin.Android.Resource.Integer.bottom_sheet_slide_duration = global::Awrad.Droid.Resource.Integer.bottom_sheet_slide_duration;
 			global::CarouselView.FormsPlugin.Android.Resource.Integer.cancel_button_image_alpha = global::Awrad.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::CarouselView.FormsPlugin.Android.Resource.Integer.config_tooltipAnimTime = global::Awrad.Droid.Resource.Integer.config_tooltipAnimTime;
 			global::CarouselView.FormsPlugin.Android.Resource.Integer.default_circle_indicator_orientation = global::Awrad.Droid.Resource.Integer.default_circle_indicator_orientation;
 			global::CarouselView.FormsPlugin.Android.Resource.Integer.design_snackbar_text_max_lines = global::Awrad.Droid.Resource.Integer.design_snackbar_text_max_lines;
 			global::CarouselView.FormsPlugin.Android.Resource.Integer.hide_password_duration = global::Awrad.Droid.Resource.Integer.hide_password_duration;
@@ -1304,7 +1198,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Layout.select_dialog_multichoice_material = global::Awrad.Droid.Resource.Layout.select_dialog_multichoice_material;
 			global::CarouselView.FormsPlugin.Android.Resource.Layout.select_dialog_singlechoice_material = global::Awrad.Droid.Resource.Layout.select_dialog_singlechoice_material;
 			global::CarouselView.FormsPlugin.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::Awrad.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::CarouselView.FormsPlugin.Android.Resource.Layout.tooltip = global::Awrad.Droid.Resource.Layout.tooltip;
 			global::CarouselView.FormsPlugin.Android.Resource.Layout.vertical_viewpager = global::Awrad.Droid.Resource.Layout.vertical_viewpager;
 			global::CarouselView.FormsPlugin.Android.Resource.String.abc_action_bar_home_description = global::Awrad.Droid.Resource.String.abc_action_bar_home_description;
 			global::CarouselView.FormsPlugin.Android.Resource.String.abc_action_bar_home_description_format = global::Awrad.Droid.Resource.String.abc_action_bar_home_description_format;
@@ -1340,6 +1233,7 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.String.appbar_scrolling_view_behavior = global::Awrad.Droid.Resource.String.appbar_scrolling_view_behavior;
 			global::CarouselView.FormsPlugin.Android.Resource.String.bottom_sheet_behavior = global::Awrad.Droid.Resource.String.bottom_sheet_behavior;
 			global::CarouselView.FormsPlugin.Android.Resource.String.character_counter_pattern = global::Awrad.Droid.Resource.String.character_counter_pattern;
+			global::CarouselView.FormsPlugin.Android.Resource.String.library_name = global::Awrad.Droid.Resource.String.library_name;
 			global::CarouselView.FormsPlugin.Android.Resource.String.mr_button_content_description = global::Awrad.Droid.Resource.String.mr_button_content_description;
 			global::CarouselView.FormsPlugin.Android.Resource.String.mr_cast_button_connected = global::Awrad.Droid.Resource.String.mr_cast_button_connected;
 			global::CarouselView.FormsPlugin.Android.Resource.String.mr_cast_button_connecting = global::Awrad.Droid.Resource.String.mr_cast_button_connecting;
@@ -1372,13 +1266,11 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Style.AlertDialog_AppCompat_Light = global::Awrad.Droid.Resource.Style.AlertDialog_AppCompat_Light;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Animation_AppCompat_Dialog = global::Awrad.Droid.Resource.Style.Animation_AppCompat_Dialog;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::Awrad.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Animation_AppCompat_Tooltip = global::Awrad.Droid.Resource.Style.Animation_AppCompat_Tooltip;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Animation_Design_BottomSheetDialog = global::Awrad.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_AlertDialog_AppCompat = global::Awrad.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Awrad.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::Awrad.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Awrad.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_Animation_AppCompat_Tooltip = global::Awrad.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_CardView = global::Awrad.Droid.Resource.Style.Base_CardView;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Awrad.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Awrad.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
@@ -1409,7 +1301,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::Awrad.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_TextAppearance_AppCompat_Title = global::Awrad.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::Awrad.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::Awrad.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Awrad.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Awrad.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Awrad.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
@@ -1456,21 +1347,15 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog = global::Awrad.Droid.Resource.Style.Base_V11_ThemeOverlay_AppCompat_Dialog;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::Awrad.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::Awrad.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V14_Widget_Design_AppBarLayout = global::Awrad.Droid.Resource.Style.Base_V14_Widget_Design_AppBarLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V21_Theme_AppCompat = global::Awrad.Droid.Resource.Style.Base_V21_Theme_AppCompat;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Awrad.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Awrad.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Awrad.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::Awrad.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V21_Widget_Design_AppBarLayout = global::Awrad.Droid.Resource.Style.Base_V21_Widget_Design_AppBarLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V22_Theme_AppCompat = global::Awrad.Droid.Resource.Style.Base_V22_Theme_AppCompat;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Awrad.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V23_Theme_AppCompat = global::Awrad.Droid.Resource.Style.Base_V23_Theme_AppCompat;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Awrad.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V26_Theme_AppCompat = global::Awrad.Droid.Resource.Style.Base_V26_Theme_AppCompat;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V26_Theme_AppCompat_Light = global::Awrad.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::Awrad.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V26_Widget_Design_AppBarLayout = global::Awrad.Droid.Resource.Style.Base_V26_Widget_Design_AppBarLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V7_Theme_AppCompat = global::Awrad.Droid.Resource.Style.Base_V7_Theme_AppCompat;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Awrad.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Awrad.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
@@ -1478,7 +1363,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::Awrad.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::Awrad.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::Awrad.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::Awrad.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_Widget_AppCompat_ActionBar = global::Awrad.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::Awrad.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::Awrad.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
@@ -1607,7 +1491,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Title = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Title;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Tooltip = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
@@ -1627,16 +1510,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Awrad.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Media = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::Awrad.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Awrad.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Design_Counter = global::Awrad.Droid.Resource.Style.TextAppearance_Design_Counter;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Awrad.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
@@ -1765,8 +1638,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Widget_AppCompat_Toolbar = global::Awrad.Droid.Resource.Style.Widget_AppCompat_Toolbar;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Awrad.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Widget_CirclePageIndicator = global::Awrad.Droid.Resource.Style.Widget_CirclePageIndicator;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::Awrad.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
-			global::CarouselView.FormsPlugin.Android.Resource.Style.Widget_Compat_NotificationActionText = global::Awrad.Droid.Resource.Style.Widget_Compat_NotificationActionText;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Widget_Design_AppBarLayout = global::Awrad.Droid.Resource.Style.Widget_Design_AppBarLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Widget_Design_BottomNavigationView = global::Awrad.Droid.Resource.Style.Widget_Design_BottomNavigationView;
 			global::CarouselView.FormsPlugin.Android.Resource.Style.Widget_Design_BottomSheet_Modal = global::Awrad.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
@@ -1835,8 +1706,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Awrad.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppBarLayout = global::Awrad.Droid.Resource.Styleable.AppBarLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppBarLayout_android_background = global::Awrad.Droid.Resource.Styleable.AppBarLayout_android_background;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::Awrad.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::Awrad.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppBarLayout_elevation = global::Awrad.Droid.Resource.Styleable.AppBarLayout_elevation;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppBarLayout_expanded = global::Awrad.Droid.Resource.Styleable.AppBarLayout_expanded;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppBarLayoutStates = global::Awrad.Droid.Resource.Styleable.AppBarLayoutStates;
@@ -1865,12 +1734,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::Awrad.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView = global::Awrad.Droid.Resource.Styleable.AppCompatTextView;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView_android_textAppearance = global::Awrad.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::Awrad.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::Awrad.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::Awrad.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::Awrad.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::Awrad.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::Awrad.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::Awrad.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme = global::Awrad.Droid.Resource.Styleable.AppCompatTheme;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
@@ -1927,7 +1790,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_colorControlActivated = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_colorControlNormal = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_colorError = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_colorError;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_colorPrimary = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
@@ -1980,8 +1842,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_windowActionBar = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Awrad.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
@@ -2090,17 +1950,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Awrad.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::Awrad.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::Awrad.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamily = global::Awrad.Droid.Resource.Styleable.FontFamily;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::Awrad.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::Awrad.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::Awrad.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::Awrad.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::Awrad.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::Awrad.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamilyFont = global::Awrad.Droid.Resource.Styleable.FontFamilyFont;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamilyFont_font = global::Awrad.Droid.Resource.Styleable.FontFamilyFont_font;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::Awrad.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::Awrad.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.ForegroundLinearLayout = global::Awrad.Droid.Resource.Styleable.ForegroundLinearLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Awrad.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Awrad.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
@@ -2127,7 +1976,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MediaRouteButton_android_minHeight = global::Awrad.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MediaRouteButton_android_minWidth = global::Awrad.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::Awrad.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::Awrad.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuGroup = global::Awrad.Droid.Resource.Styleable.MenuGroup;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Awrad.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuGroup_android_enabled = global::Awrad.Droid.Resource.Styleable.MenuGroup_android_enabled;
@@ -2139,7 +1987,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_actionLayout = global::Awrad.Droid.Resource.Styleable.MenuItem_actionLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_actionProviderClass = global::Awrad.Droid.Resource.Styleable.MenuItem_actionProviderClass;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_actionViewClass = global::Awrad.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_alphabeticModifiers = global::Awrad.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::Awrad.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_android_checkable = global::Awrad.Droid.Resource.Styleable.MenuItem_android_checkable;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_android_checked = global::Awrad.Droid.Resource.Styleable.MenuItem_android_checked;
@@ -2153,12 +2000,7 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_android_title = global::Awrad.Droid.Resource.Styleable.MenuItem_android_title;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_android_titleCondensed = global::Awrad.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_android_visible = global::Awrad.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_contentDescription = global::Awrad.Droid.Resource.Styleable.MenuItem_contentDescription;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_iconTint = global::Awrad.Droid.Resource.Styleable.MenuItem_iconTint;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_iconTintMode = global::Awrad.Droid.Resource.Styleable.MenuItem_iconTintMode;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_numericModifiers = global::Awrad.Droid.Resource.Styleable.MenuItem_numericModifiers;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_showAsAction = global::Awrad.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuItem_tooltipText = global::Awrad.Droid.Resource.Styleable.MenuItem_tooltipText;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuView = global::Awrad.Droid.Resource.Styleable.MenuView;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuView_android_headerBackground = global::Awrad.Droid.Resource.Styleable.MenuView_android_headerBackground;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.MenuView_android_horizontalDivider = global::Awrad.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
@@ -2192,11 +2034,6 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView = global::Awrad.Droid.Resource.Styleable.RecyclerView;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::Awrad.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_android_orientation = global::Awrad.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_fastScrollEnabled = global::Awrad.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::Awrad.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::Awrad.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::Awrad.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::Awrad.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_layoutManager = global::Awrad.Droid.Resource.Styleable.RecyclerView_layoutManager;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_reverseLayout = global::Awrad.Droid.Resource.Styleable.RecyclerView_reverseLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.RecyclerView_spanCount = global::Awrad.Droid.Resource.Styleable.RecyclerView_spanCount;
@@ -2270,18 +2107,15 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TabLayout_tabTextAppearance = global::Awrad.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TabLayout_tabTextColor = global::Awrad.Droid.Resource.Styleable.TabLayout_tabTextColor;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance = global::Awrad.Droid.Resource.Styleable.TextAppearance;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_fontFamily = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_shadowColor = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_shadowDx = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_shadowDy = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_shadowRadius = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_textColor = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_textColor;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_textColorHint = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_textColorLink = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_textSize = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_textSize;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_textStyle = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_textStyle;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_android_typeface = global::Awrad.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_fontFamily = global::Awrad.Droid.Resource.Styleable.TextAppearance_fontFamily;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextAppearance_textAllCaps = global::Awrad.Droid.Resource.Styleable.TextAppearance_textAllCaps;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextInputLayout = global::Awrad.Droid.Resource.Styleable.TextInputLayout;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.TextInputLayout_android_hint = global::Awrad.Droid.Resource.Styleable.TextInputLayout_android_hint;
@@ -2346,6 +2180,49 @@ namespace Awrad.Droid
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.ViewStubCompat_android_id = global::Awrad.Droid.Resource.Styleable.ViewStubCompat_android_id;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Awrad.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
 			global::CarouselView.FormsPlugin.Android.Resource.Styleable.ViewStubCompat_android_layout = global::Awrad.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Com.Android.DeskClock.Resource.String.library_name = global::Awrad.Droid.Resource.String.library_name;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiCentered = global::Awrad.Droid.Resource.Attribute.vpiCentered;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiCirclePageIndicatorStyle = global::Awrad.Droid.Resource.Attribute.vpiCirclePageIndicatorStyle;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiFillColor = global::Awrad.Droid.Resource.Attribute.vpiFillColor;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiOrientation = global::Awrad.Droid.Resource.Attribute.vpiOrientation;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiPageColor = global::Awrad.Droid.Resource.Attribute.vpiPageColor;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiRadius = global::Awrad.Droid.Resource.Attribute.vpiRadius;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiSnap = global::Awrad.Droid.Resource.Attribute.vpiSnap;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiStrokeColor = global::Awrad.Droid.Resource.Attribute.vpiStrokeColor;
+			global::Com.ViewPagerIndicator.Resource.Attribute.vpiStrokeWidth = global::Awrad.Droid.Resource.Attribute.vpiStrokeWidth;
+			global::Com.ViewPagerIndicator.Resource.Boolean.default_circle_indicator_centered = global::Awrad.Droid.Resource.Boolean.default_circle_indicator_centered;
+			global::Com.ViewPagerIndicator.Resource.Boolean.default_circle_indicator_snap = global::Awrad.Droid.Resource.Boolean.default_circle_indicator_snap;
+			global::Com.ViewPagerIndicator.Resource.Color.default_circle_indicator_fill_color = global::Awrad.Droid.Resource.Color.default_circle_indicator_fill_color;
+			global::Com.ViewPagerIndicator.Resource.Color.default_circle_indicator_page_color = global::Awrad.Droid.Resource.Color.default_circle_indicator_page_color;
+			global::Com.ViewPagerIndicator.Resource.Color.default_circle_indicator_stroke_color = global::Awrad.Droid.Resource.Color.default_circle_indicator_stroke_color;
+			global::Com.ViewPagerIndicator.Resource.Color.vpi__background_holo_dark = global::Awrad.Droid.Resource.Color.vpi__background_holo_dark;
+			global::Com.ViewPagerIndicator.Resource.Color.vpi__background_holo_light = global::Awrad.Droid.Resource.Color.vpi__background_holo_light;
+			global::Com.ViewPagerIndicator.Resource.Color.vpi__bright_foreground_disabled_holo_dark = global::Awrad.Droid.Resource.Color.vpi__bright_foreground_disabled_holo_dark;
+			global::Com.ViewPagerIndicator.Resource.Color.vpi__bright_foreground_disabled_holo_light = global::Awrad.Droid.Resource.Color.vpi__bright_foreground_disabled_holo_light;
+			global::Com.ViewPagerIndicator.Resource.Color.vpi__bright_foreground_holo_dark = global::Awrad.Droid.Resource.Color.vpi__bright_foreground_holo_dark;
+			global::Com.ViewPagerIndicator.Resource.Color.vpi__bright_foreground_holo_light = global::Awrad.Droid.Resource.Color.vpi__bright_foreground_holo_light;
+			global::Com.ViewPagerIndicator.Resource.Color.vpi__bright_foreground_inverse_holo_dark = global::Awrad.Droid.Resource.Color.vpi__bright_foreground_inverse_holo_dark;
+			global::Com.ViewPagerIndicator.Resource.Color.vpi__bright_foreground_inverse_holo_light = global::Awrad.Droid.Resource.Color.vpi__bright_foreground_inverse_holo_light;
+			global::Com.ViewPagerIndicator.Resource.Dimension.default_circle_indicator_radius = global::Awrad.Droid.Resource.Dimension.default_circle_indicator_radius;
+			global::Com.ViewPagerIndicator.Resource.Dimension.default_circle_indicator_stroke_width = global::Awrad.Droid.Resource.Dimension.default_circle_indicator_stroke_width;
+			global::Com.ViewPagerIndicator.Resource.Id.horizontal = global::Awrad.Droid.Resource.Id.horizontal;
+			global::Com.ViewPagerIndicator.Resource.Id.vertical = global::Awrad.Droid.Resource.Id.vertical;
+			global::Com.ViewPagerIndicator.Resource.Integer.default_circle_indicator_orientation = global::Awrad.Droid.Resource.Integer.default_circle_indicator_orientation;
+			global::Com.ViewPagerIndicator.Resource.String.library_name = global::Awrad.Droid.Resource.String.library_name;
+			global::Com.ViewPagerIndicator.Resource.Style.Theme_PageIndicatorDefaults = global::Awrad.Droid.Resource.Style.Theme_PageIndicatorDefaults;
+			global::Com.ViewPagerIndicator.Resource.Style.Widget = global::Awrad.Droid.Resource.Style.Widget;
+			global::Com.ViewPagerIndicator.Resource.Style.Widget_CirclePageIndicator = global::Awrad.Droid.Resource.Style.Widget_CirclePageIndicator;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiCentered = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator_vpiCentered;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiFillColor = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator_vpiFillColor;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiOrientation = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator_vpiOrientation;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiPageColor = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator_vpiPageColor;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiRadius = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator_vpiRadius;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiSnap = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator_vpiSnap;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiStrokeColor = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator_vpiStrokeColor;
+			global::Com.ViewPagerIndicator.Resource.Styleable.CirclePageIndicator_vpiStrokeWidth = global::Awrad.Droid.Resource.Styleable.CirclePageIndicator_vpiStrokeWidth;
+			global::Com.ViewPagerIndicator.Resource.Styleable.ViewPagerIndicator = global::Awrad.Droid.Resource.Styleable.ViewPagerIndicator;
+			global::Com.ViewPagerIndicator.Resource.Styleable.ViewPagerIndicator_vpiCirclePageIndicatorStyle = global::Awrad.Droid.Resource.Styleable.ViewPagerIndicator_vpiCirclePageIndicatorStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Awrad.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -6467,8 +6344,8 @@ namespace Awrad.Droid
 			// aapt resource value: 0x7f090027
 			public const int abc_toolbar_collapse_description = 2131296295;
 			
-			// aapt resource value: 0x7f09003e
-			public const int app_name = 2131296318;
+			// aapt resource value: 0x7f09003f
+			public const int app_name = 2131296319;
 			
 			// aapt resource value: 0x7f090036
 			public const int appbar_scrolling_view_behavior = 2131296310;
@@ -6478,6 +6355,9 @@ namespace Awrad.Droid
 			
 			// aapt resource value: 0x7f090038
 			public const int character_counter_pattern = 2131296312;
+			
+			// aapt resource value: 0x7f09003e
+			public const int library_name = 2131296318;
 			
 			// aapt resource value: 0x7f090000
 			public const int mr_button_content_description = 2131296256;

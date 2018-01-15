@@ -2,6 +2,8 @@
 using Android.Content.PM;
 using Android.OS;
 using CarouselView.FormsPlugin.Android;
+using FFImageLoading;
+using FFImageLoading.Config;
 using FFImageLoading.Forms.Droid;
 
 namespace Awrad.Droid
@@ -21,7 +23,9 @@ namespace Awrad.Droid
 
             CarouselViewRenderer.Init();
 
-            CachedImageRenderer.Init(false);
+            CachedImageRenderer.Init(true);
+
+            ImageService.Instance.Initialize(new Configuration { VerboseLogging = true });
 
             LoadApplication(new App());
         }

@@ -5,10 +5,10 @@ using Awrad.Droid;
 using Awrad.Helpers;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(FileHelper))]
+[assembly: Dependency(typeof(FileHelperIOS))]
 namespace Awrad.Droid
 {
-    public class FileHelper : IFileHelper
+    public class FileHelperIOS : IFileHelper
     {
         public string GetLocalFilePath(string filename)
         {

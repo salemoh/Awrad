@@ -1,6 +1,7 @@
 ﻿
 using CarouselView.FormsPlugin.iOS;
-using FFImageLoading.Forms;
+using FFImageLoading;
+using FFImageLoading.Config;
 using FFImageLoading.Forms.Touch;
 using Foundation;
 using UIKit;
@@ -18,7 +19,9 @@ namespace Awrad.iOS
 
             CachedImageRenderer.Init();
 
-			LoadApplication(new App());
+		    ImageService.Instance.Initialize(new Configuration{VerboseLogging = true});
+
+            LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);
 		}
