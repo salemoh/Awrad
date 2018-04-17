@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awrad.iOS", "Awrad\Awrad.iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Awrad.UWP", "Awrad\Awrad.UWP\Awrad.UWP.csproj", "{66D01ECF-B896-4BDA-9D3F-F13063E37556}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "db", "db", "{81F8C531-8BE7-406A-A514-920FAB079772}"
+	ProjectSection(SolutionItems) = preProject
+		db\Awrad.sqlite = db\Awrad.sqlite
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,5 +135,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9BEE554-37B3-480E-B91B-8AFCD14DABFE}
 	EndGlobalSection
 EndGlobal
