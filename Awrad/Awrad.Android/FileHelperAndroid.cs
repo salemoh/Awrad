@@ -5,10 +5,10 @@ using Awrad.Droid;
 using Awrad.Helpers;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(FileHelperIOS))]
+[assembly: Dependency(typeof(FileHelperAndroid))]
 namespace Awrad.Droid
 {
-    public class FileHelperIOS : IFileHelper
+    public class FileHelperAndroid : IFileHelper
     {
         public string GetLocalFilePath(string filename)
         {
@@ -16,20 +16,17 @@ namespace Awrad.Droid
             path = Path.Combine(path, filename);
 
             // If no DB or DB too small then copy it from assets
-            CopyDbIfNotExist();
+            CopyDbIfNotExist(force: true);
 
             // Return the path to the DB
             return path;
 
-            void CopyDbIfNotExist()
+            void CopyDbIfNotExist(bool force = false)
             {
                 // Check if file exists or too small
                 var copyDB = !File.Exists(path) || (new FileInfo(path).Length < 100);
 
-                // In developement lets make always true
-                copyDB = true;
-
-                if (copyDB)
+                if (copyDB || force)
                 {
                     // Get an instance of asset manager
                     var assets = Android.App.Application.Context.Assets;

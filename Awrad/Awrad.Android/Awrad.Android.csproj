@@ -221,7 +221,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileHelperIOS.cs" />
+    <Compile Include="FileHelperAndroid.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Resources\Resource.designer.cs" />

@@ -178,7 +178,7 @@
     </BundleResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileHelperAndroid.cs" />
+    <Compile Include="FileHelperiOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="ShareHelperiOS.cs" />
